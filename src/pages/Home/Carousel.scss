@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&display=swap');
+@import "./src/variables.scss";
+
+// globals 
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "poppins", sans-serif;
+}
+
+a {
+  display: inline-block;
+}
+
+.contact-btn { // might change this to a styled component
+  padding: 15px 20px;
+  color: white;
+  font-size: 48px;
+  border: 2px solid white;
+  border-radius: 30px;
+  text-decoration: none;
+}
+
+// main vert carousel
+#root { height: 100% }
+html,
+body {
+  position: relative;
+  height: 100%;
+}
+
+body {
+  background: white;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+
+.mySwiper {
+  width: 100%;
+  height: 100vh;
+  background: white;
+}
+
+.swiper-slide {
+  font-size: 18px;
+  color: #fff;
+}
+
+.parallax-bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 145vh;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: center;
+}
+
+.swiper-pagination-vertical.swiper-pagination-bullets, .swiper-vertical > .swiper-pagination-bullets {
+  right: 15px;
+}
+
+.swiper-pagination-vertical.swiper-pagination-bullets .swiper-pagination-bullet, .swiper-vertical > .swiper-pagination-bullets .swiper-pagination-bullet {
+  margin: 10px 0;
+}
+
+.swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background-color: $text-accent;
+}
+
+// Hero/Section 1
+
+// Section 2
+
+.s2-bg {
+  width: 100%;
+  height: 100vh;
+  background-image: url("./s2-bg.png"); // change this to an actual gradient maybe?
+  padding: 60px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px; // this is going to cause some issues, use a padding instead on the button
+}
+
+.s2-top-wrapper {
+  margin-top: 125px;
+  margin-bottom: 25px;
+  padding: 0 150px;
+  display: flex;
+  align-items: center;
+}
+
+.s2-h1 {
+  font-size: 95px;
+  font-weight: $font-semibold;
+  text-align: right;
+}
+
+.s2-span {
+  font-weight: $font-extrabold;
+}
+
+
+// Section 3
+
+.s3-bg {
+
+  .s3-top-wrapper {
+    margin-top: 20px;
+    margin-bottom: 50px;
+    padding: 0 150px;
+    display: flex;
+    align-items: flex-end;
+
+    h2 {
+      font-size: 40px;
+      font-weight: $font-bold;
+    }
+    img {
+      margin-right: 150px;
+      width: 500px;
+      height: 500px;
+      transform: skew(65deg, -25deg);
+    }
+  }
+  .info-wrapper {
+    width: 100%;
+    padding: 0 60px;
+    display: flex;
+    justify-content: space-between;
+    div {
+      width: 400px;
+      height: 250px;
+      background-color: $text-light;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 15px;
+      p:nth-of-type(1) {
+        font-size: 36px;
+        font-weight: $font-bold;
+        color: $text-dark;
+        text-align: center;
+      }
+      p:nth-of-type(2) {
+        font-size: 26px;
+        font-weight: $font-semibold;
+        color: $text-dark;
+        text-align: center;
+      }
+    }
+  }
+}
+
+
+// Section 4 Horizontal carousel
+.mySwiper2 {
+  width: 100%;
+  height: 100vh;
+  background-color: blue;
+  .swiper-slide {
+    padding: 0 150px;
+    .slider-wrapper {
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      
+      .slider-img { // change this to a fractional, static unit bad
+        width: 400px;
+        height: 400px;
+      }
+      .slider-txt {
+        width: 400px;
+        height: 400px;
+      }
+    }
+  }
+}
+
+// Section 5 articles
+.mySwiper3 {
+  width: 100%;
+  height: 300px;
+  margin-top: 80px;
+  .swiper-slide {
+    background-color: white;
+    color: black;
+  }
+}
+
+// Section 6 - Convinced?
+
