@@ -1,23 +1,27 @@
 
 import { Link } from "react-router-dom";
 
+// import Atropos component
+import Atropos from 'atropos/react';
+// import Atropos styles
+import 'atropos/css';
+
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
 
-import "./Carousel.scss";
+import "./carousel.scss";
 
 import background from './background.png';
 import s2example from "./s2-example.png";
-import phone from './phone-outline.svg';
 import hotBeansGif from './hotBeans.gif';
 import globey from './globey.png';
+import phone from './phone-outline.png';
 
 // import required modules
-import { Navigation, Mousewheel, Parallax, Pagination } from "swiper";
+import { Mousewheel, Parallax, Pagination } from "swiper";
 
 export function Carousel() {
   return (
@@ -27,7 +31,7 @@ export function Carousel() {
         parallax={true}
         direction={"vertical"}
         mousewheel={true}
-        // allowTouchMove={false} need a mobile fix
+        allowTouchMove={false} need a mobile fix
         pagination={{
           clickable: true,
         }}
@@ -41,20 +45,23 @@ export function Carousel() {
             "backgroundImage":
               `url(${background})`,
           }}
-          data-swiper-parallax="-20%"
+          data-swiper-parallax="-25%"
         ></div>
         {/* Hero */}
         <SwiperSlide>
-          <section>
-            <div className="device-space-phone">
+          <section className="hero">
+            <div className="device-wrapper">
+              <div className="device-space-phone">
 
-            </div>
-            <div className="device-space-monitor">
+              </div>
+              <div className="device-space-monitor">
 
-            </div>
-            <div className="device-space-tablet">
+              </div>
+              <div className="device-space-tablet">
 
+              </div>
             </div>
+            
             <div className="launch-station">
 
             </div>
@@ -75,25 +82,27 @@ export function Carousel() {
         <SwiperSlide>
           <section className="s3-bg">
             <div className="s3-top-wrapper" data-swiper-parallax="-900">
-              <h2>Tailored to you Lorem ipsum dolor sit amet, consectetur adipiscing elit</h2>
-              {/* <img src={phone} alt="" /> */}
+              <h2>Just some features we offer you</h2>
+              <Atropos className="s3-phone-atropos">
+                <img src={phone} alt="" className="s3-phone"/>
+              </Atropos>
             </div>
             <div className="info-wrapper">
-              <div data-swiper-parallax="-100">
-                <p>Reponsive design</p>
-                <p>Making your site look great on all devices</p>
-              </div>
               <div data-swiper-parallax="-300">
-                <p>Reponsive design</p>
-                <p>Making your site look great on all devices</p>
+                <p>Unique designs</p>
+                <p>Where everything is built from scratch, not from a template</p>
+              </div>
+              <div data-swiper-parallax="-400">
+                <p>Flexible creation</p>
+                <p>Around your needs to ensure we deliver the best product that suits you</p>
               </div>
               <div data-swiper-parallax="-500">
-                <p>Reponsive design</p>
-                <p>Making your site look great on all devices</p>
+                <p>Brilliant SEO</p>
+                <p>Ensures that your site is the one that is viewed, not your competitors</p>
               </div>
-              <div data-swiper-parallax="-700">
+              <div data-swiper-parallax="-600">
                 <p>Reponsive design</p>
-                <p>Making your site look great on all devices</p>
+                <p>Making your site look and feel great on all devices so all clients can be reached</p>
               </div>
             </div>
           </section>
@@ -144,9 +153,9 @@ export function Carousel() {
             modules={[]}
             className="mySwiper3"
           >
-            <SwiperSlide>Slide 1</SwiperSlide>
-            <SwiperSlide>Slide 2</SwiperSlide>
-            <SwiperSlide>Slide 3</SwiperSlide>
+            <SwiperSlide>Why your website must have mobile functionality</SwiperSlide>
+            <SwiperSlide>What is SEO?</SwiperSlide>
+            <SwiperSlide>Does your website need to be unique?</SwiperSlide>
             <SwiperSlide>Slide 4</SwiperSlide>
             <SwiperSlide>Slide 5</SwiperSlide>
             <SwiperSlide>Slide 6</SwiperSlide>
@@ -158,18 +167,9 @@ export function Carousel() {
             <img src={hotBeansGif} alt=""/>
             <p>Convinced?</p>
             <Link className="contact-btn" to="/">Contact Us</Link>
+            <Link>More about us</Link>
             <img src={globey} alt=""/>
           </section>
-          
-        </SwiperSlide>
-        {/* footer */}
-        <SwiperSlide style={{height: "150px"}}>
-            <footer>
-              <div>
-                <Link></Link>
-              </div>
-              <p>Designed and created by Rowan Elsworth</p>
-            </footer>
         </SwiperSlide>
       </Swiper>
     </>

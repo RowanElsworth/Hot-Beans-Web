@@ -1,6 +1,6 @@
 
-import { Header } from "../../components/Header"
-import { Carousel } from "./Carousel"
+import { Header } from "../../components/header"
+import { Carousel } from "./carousel"
 
 export default function App() {
   return (
