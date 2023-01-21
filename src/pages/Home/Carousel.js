@@ -73,7 +73,7 @@ export function Carousel() {
             {/* make an animation for this wrapper that makes the elements slide in from left and right in to the center */}
             <div className="s2-top-wrapper" data-swiper-parallax="-700">
               <img src={s2example} alt="Phone tablet and monitor design of our websites" className="s2-example-img" />
-              <h1 className="s2-h1">Bespoke website design tailored <br></br>for <span className="s2-span"s><u>YOU</u></span></h1>
+              <h1 className="s2-h1">Bespoke website design tailored for <span className="s2-span"s><u>YOU</u></span></h1>
             </div>
             <Link className="contact-btn s2-btn" to="/" data-swiper-parallax="-500">Contact Us</Link>
           </section>
