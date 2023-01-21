@@ -13,6 +13,8 @@ import "./Carousel.scss";
 import background from './background.png';
 import s2example from "./s2-example.png";
 import phone from './phone-outline.svg';
+import hotBeansGif from './hotBeans.gif';
+import globey from './globey.png';
 
 // import required modules
 import { Navigation, Mousewheel, Parallax, Pagination } from "swiper";
@@ -30,7 +32,7 @@ export function Carousel() {
           clickable: true,
         }}
         modules={[Mousewheel, Parallax, Pagination]}
-        className="mySwiper swiper-v"
+        className="mySwiper1 swiper-v"
       >
         <div
           slot="container-start"
@@ -41,26 +43,6 @@ export function Carousel() {
           }}
           data-swiper-parallax="-20%"
         ></div>
-        {/* this is an emample slide for me don't delete pls */}
-        <SwiperSlide>
-          <div className="title" data-swiper-parallax="-300">
-            Slide 1
-          </div>
-          <div className="subtitle" data-swiper-parallax="-200">
-            Subtitle
-          </div>
-          <div className="text" data-swiper-parallax="-100">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
-              dictum mattis velit, sit amet faucibus felis iaculis nec. Nulla
-              laoreet justo vitae porttitor porttitor. Suspendisse in sem justo.
-              Integer laoreet magna nec elit suscipit, ac laoreet nibh euismod.
-              Aliquam hendrerit lorem at elit facilisis rutrum. Ut at
-              ullamcorper velit. Nulla ligula nisi, imperdiet ut lacinia nec,
-              tincidunt ut libero. Aenean feugiat non eros quis feugiat.
-            </p>
-          </div>
-        </SwiperSlide>
         {/* Hero */}
         <SwiperSlide>
           <section>
@@ -92,24 +74,24 @@ export function Carousel() {
         {/* section 3 */}
         <SwiperSlide>
           <section className="s3-bg">
-            <div className="s3-top-wrapper" data-swiper-parallax="-700">
+            <div className="s3-top-wrapper" data-swiper-parallax="-900">
               <h2>Tailored to you Lorem ipsum dolor sit amet, consectetur adipiscing elit</h2>
-              <img src={phone} alt="" />
+              {/* <img src={phone} alt="" /> */}
             </div>
-            <div className="info-wrapper" data-swiper-parallax="-500">
-              <div>
+            <div className="info-wrapper">
+              <div data-swiper-parallax="-100">
                 <p>Reponsive design</p>
                 <p>Making your site look great on all devices</p>
               </div>
-              <div>
+              <div data-swiper-parallax="-300">
                 <p>Reponsive design</p>
                 <p>Making your site look great on all devices</p>
               </div>
-              <div>
+              <div data-swiper-parallax="-500">
                 <p>Reponsive design</p>
                 <p>Making your site look great on all devices</p>
               </div>
-              <div>
+              <div data-swiper-parallax="-700">
                 <p>Reponsive design</p>
                 <p>Making your site look great on all devices</p>
               </div>
@@ -172,21 +154,22 @@ export function Carousel() {
             <SwiperSlide>Slide 8</SwiperSlide>
           </Swiper>
           {/* section 6 - convinced */}
-          <section>
-            <div className="hot-beans-gif">
-
-            </div>
+          <section className="convinced">
+            <img src={hotBeansGif} alt=""/>
             <p>Convinced?</p>
             <Link className="contact-btn" to="/">Contact Us</Link>
-            <div className="the-place-for-globey">
-
-            </div>
+            <img src={globey} alt=""/>
           </section>
           
         </SwiperSlide>
         {/* footer */}
-        <SwiperSlide>
-            <p>just to test D:</p>
+        <SwiperSlide style={{height: "150px"}}>
+            <footer>
+              <div>
+                <Link></Link>
+              </div>
+              <p>Designed and created by Rowan Elsworth</p>
+            </footer>
         </SwiperSlide>
       </Swiper>
     </>

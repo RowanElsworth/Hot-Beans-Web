@@ -40,7 +40,7 @@ body {
   padding: 0;
 }
 
-.mySwiper {
+.mySwiper1 {
   width: 100%;
   height: 100vh;
   background: white;
@@ -113,8 +113,14 @@ body {
 // Section 3
 
 .s3-bg {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
 
   .s3-top-wrapper {
+    width: 100%;
+    height: 50vh;
     margin-top: 20px;
     margin-bottom: 50px;
     padding: 0 150px;
@@ -134,9 +140,12 @@ body {
   }
   .info-wrapper {
     width: 100%;
+    height: 50vh;
     padding: 0 60px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+
     div {
       width: 400px;
       height: 250px;
@@ -147,12 +156,14 @@ body {
       justify-content: center;
       flex-direction: column;
       gap: 15px;
+
       p:nth-of-type(1) {
         font-size: 36px;
         font-weight: $font-bold;
         color: $text-dark;
         text-align: center;
       }
+      
       p:nth-of-type(2) {
         font-size: 26px;
         font-weight: $font-semibold;
@@ -202,4 +213,50 @@ body {
 }
 
 // Section 6 - Convinced?
+.convinced {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  img:nth-of-type(1) {
+    width: 200px;
+    height: 200px;
+  }
+  p {
+    font-size: 90px;
+    font-weight: $font-semibold;
+  }
+  img:nth-of-type(2) {
+    width: 2500px;
+    height: 2500px;
+    margin-top: -295px;
+    z-index: -1;
+    animation: globey-spin 20s linear infinite; // maybe make is face stay still
+  }
+}
 
+@keyframes globey-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+// footer
+footer {
+  width: 100%;
+  height: 150px;
+  background-color: $accent-main;
+  div {
+
+    a {
+
+    }
+  }
+  
+  p {
+
+  }
+}
