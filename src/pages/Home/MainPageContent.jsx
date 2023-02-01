@@ -1,11 +1,13 @@
 
 import { Link } from 'react-router-dom';
 
+// Atropos
 // import Atropos component
 import Atropos from 'atropos/react';
 // import Atropos styles
 import 'atropos/css';
 
+// Swiper
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Mousewheel } from 'swiper';
@@ -26,8 +28,6 @@ import hotBeansGif from './hotBeans.gif';
 import globey from './globey2.png';
 import phone from './phone-outline.png';
 import dino from './testimonial-dino.png'
-import cloud from './cloud.svg';
-
 
 export function MainPageContent() {
   return (
@@ -148,7 +148,7 @@ export function MainPageContent() {
             <div className="article-1">
               <a href="https://www.hswsolutions.com/resources/why-a-mobile-friendly-website-is-important/" rel="noreferrer" target="_blank" className="link-container">
                 <p>Why your website must be mobile-friendly</p>
-                <Link>View</Link>
+                <p className="view-more">View</p>
               </a>
             </div>
           </SwiperSlide>
@@ -156,7 +156,7 @@ export function MainPageContent() {
             <div className="article-2">
               <a href="https://www.redlineminds.com/search-engine-optimizaton/what-is-seo-how-to-do-seo-for-ecommerce/" rel="noreferrer" target="_blank" className="link-container">
                 <p>What is SEO?</p>
-                <Link>View</Link>
+                <p className="view-more">View</p>
               </a>
             </div>
           </SwiperSlide>
@@ -164,7 +164,7 @@ export function MainPageContent() {
             <div className="article-3">
               <a href="https://www.digitaldoughnut.com/articles/2020/december-2020/why-unique-content-is-more-important-for-your-site" rel="noreferrer" target="_blank" className="link-container">
                 <p>Does your website need to be unique?</p>
-                <Link>View</Link>
+                <p className="view-more">View</p>
               </a>
             </div>
           </SwiperSlide>
@@ -172,7 +172,7 @@ export function MainPageContent() {
             <div className="article-4">
               <a href="https://www.glasgowcreative.co.uk/why-colour-scheme-is-important-branding-business/" rel="noreferrer" target="_blank" className="link-container">
                 <p>Benefits of a consistent colour scheme</p>
-                <Link>View</Link>
+                <p className="view-more">View</p>
               </a>
             </div>
           </SwiperSlide>
@@ -180,7 +180,7 @@ export function MainPageContent() {
             <div className="article-5">
               <a href="https://www.dreamhost.com/blog/website-benefits-for-small-business/" rel="noreferrer" target="_blank" className="link-container">
                 <p>Why websites are good for small businesses</p>
-                <Link>View</Link>
+                <p className="view-more">View</p>
               </a>
             </div>
           </SwiperSlide>
@@ -188,7 +188,7 @@ export function MainPageContent() {
             <div className="article-6">
               <a href="https://www.microdinc.com/blog/improve-customer-satisfaction/" rel="noreferrer" target="_blank" className="link-container">
                 <p>How websites boost customer satisfaction</p>
-                <Link>View</Link>
+                <p className="view-more">View</p>
               </a>
             </div>
           </SwiperSlide>
@@ -196,7 +196,7 @@ export function MainPageContent() {
             <div className="article-7">
               <a href="https://ballywiremedia.ie/2021/10/05/1580-2/" rel="noreferrer" target="_blank" className="link-container">
                 <p>Benefits of websites over traditional media</p>
-                <Link>View</Link>
+                <p className="view-more">View</p>
               </a>
             </div>
           </SwiperSlide>

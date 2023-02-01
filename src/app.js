@@ -1,12 +1,12 @@
 
-import { BrowserRouter, HashRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import Home from './pages/Home/Home';
-import About from './pages/About/About.jsx';
-import Portfolio from './pages/Portfolio/Portfolio'
+import About from './pages/About/About';
+import Portfolio from './pages/Portfolio/Portfolio';
 import Careers from './pages/Careers/Careers';
 import Contact from './pages/Contact/Contact';
-import Recources from './pages/Recources/Recources'
+import Recources from './pages/Recources/Recources';
 
 
 export default function App() {
