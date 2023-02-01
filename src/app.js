@@ -1,5 +1,6 @@
-import ReactDOM from 'react-dom/client';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
+import { BrowserRouter, HashRouter, Routes, Route } from 'react-router-dom';
+
 import Home from './pages/Home/Home';
 import About from './pages/About/About.jsx';
 import Portfolio from './pages/Portfolio/Portfolio'
@@ -22,6 +23,3 @@ export default function App() {
     </BrowserRouter>
   );
 }
-
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<App />);
