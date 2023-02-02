@@ -8,7 +8,6 @@ import Careers from './pages/Careers/Careers';
 import Contact from './pages/Contact/Contact';
 import Recources from './pages/Recources/Recources';
 
-
 export default function App() {
   return (
     <BrowserRouter>

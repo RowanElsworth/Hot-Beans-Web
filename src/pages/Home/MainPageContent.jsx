@@ -138,10 +138,11 @@ export function MainPageContent() {
       {/* section 5 */}
       <section className="s5">
         <Swiper
+          navigation={true}
           slidesPerView={3.2}
           spaceBetween={30}
           centeredSlides={true}
-          modules={[]}
+          modules={[Navigation]}
           className="mySwiper2"
         >
           <SwiperSlide>

@@ -1,0 +1,111 @@
+
+@import "./src/variables.scss";
+
+.about-hero {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(130deg, rgba(2,0,36,1) 0%, rgba(56,32,55,1) 50%);
+  padding: $header-height 0 0 70px;
+  h1 {
+    font-size: min(max(1.8rem, 4vw), 9rem);
+  }
+  p {
+    font-size: min(max(1.8rem, 4vw), 4rem);
+  }
+}
+
+.about-information {
+  width: 100%;
+  background-image: url("background.png");
+  background-attachment: fixed;
+  .info-container {
+    margin: 0 70px;
+    display: flex;
+    gap: 25px;
+    .info-img-container {
+      width: 45%;
+      height: 350px;
+      margin: 10px;
+      background-color: blue;
+    }
+    .info-txt-container {
+      width: 55%;
+      padding: 0 25px;
+      margin: 10px;
+      background-color: white;
+      color: black;
+      font-size: min(max(1.8rem, 4vw), 2.6rem);
+      display: flex;
+      align-items: center;
+    }
+  }
+}
+
+.about-vid {
+  width: 100%;
+  height: 50vh;
+  background-color: orange;
+}
+
+.meet-team {
+  width: 100%;
+  background-image: url("background.png");
+  background-attachment: fixed;
+  padding: 0 70px;
+  h1 {
+    font-size: min(max(1.8rem, 4vw), 9rem);
+  }
+  .team-container {
+    width: 100%;
+    .team-box {
+      padding: 10px 0;
+      width: 100%;
+      display: flex;
+      .team-left {
+        outline: 1px solid orange;
+        width: 20%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        .team-img {
+          outline: 1px solid blue;
+          width: 200px;
+          height: 200px;
+          border-radius: 100%;
+          img {
+
+          }
+        }
+        p:nth-of-type(1) {
+          font-size: min(max(1.8rem, 4vw), 3.5rem);
+        }
+        p:nth-of-type(2) {
+          font-size: min(max(1.8rem, 4vw), 2.4rem);
+        }
+      }
+      .team-right {
+        width: 80%;
+        padding: 0 25px;
+        color: white;
+        font-size: min(max(1.8rem, 4vw), 2.8rem);
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+  .about-links {
+    width: 100%;
+    padding: 45px 0;
+    display: flex;
+    justify-content: center;
+    .links-container {
+      width: 60%;
+      display: flex;
+      justify-content: space-between;
+      a {
+        padding: 125px 175px;
+        background-color: white;
+      }
+    }
+  }
+}
