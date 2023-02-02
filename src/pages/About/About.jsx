@@ -1,7 +1,7 @@
 
 import { useEffect } from "react"
 
-import { Link } from "react-router-dom"
+// import { Link } from "react-router-dom"
 
 import { Header } from "../../components/Header"
 import { Footer } from "../../components/footer"
@@ -71,7 +71,7 @@ export default function App() {
           <div className="team-box">
             <div className="team-left">
               <div className="team-img">
-                <img src="" alt="A picture of sam with a karen hair style" />
+                <img src="" alt="Sam with a karen hair style" />
               </div>
               <p>Karen</p>
               <p>Graphic Lead</p>
@@ -83,7 +83,7 @@ export default function App() {
           <div className="team-box">
             <div className="team-left">
               <div className="team-img">
-                <img src={Sam} alt="A picture of our most loved tech intern Sam smiling with his thumbs up." />
+                <img src={Sam} alt="Our most loved tech intern Sam smiling with his thumbs up." />
               </div>
               <p>Sam</p>
               <p>Quality Control Intern</p>
