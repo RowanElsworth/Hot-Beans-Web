@@ -1,10 +1,14 @@
 
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 
 import { Header } from "../../components/Header";
 import "./Contact.scss"
 
-export default function app() {
+export default function App() {
+  useEffect(() => {
+    document.title = "Hot Beans Web | Contact"
+  }, []);
   return (
     <>
       <Header></Header>
