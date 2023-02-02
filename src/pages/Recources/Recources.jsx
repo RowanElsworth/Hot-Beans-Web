@@ -1,11 +1,14 @@
 
+import { useEffect } from "react";
+
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination } from "swiper";
+import { Navigation } from "swiper";
 
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/grid";
+import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 
@@ -15,50 +18,84 @@ import { Footer } from "../../components/footer";
 import "./Recources.scss"
 
 export default function App() {
+  useEffect(() => {
+    document.title = "Hot Beans Web | Contact"
+  }, []);
     return (
         <>
           <Header />
           <section className="resource-scroll">
-            <Swiper
-              className="mySwiper1"
-              navigation={true}
-              pagination={{
-                clickable: true,
-              }}
-              modules={[Navigation, Pagination]}
-            >
-              <SwiperSlide>
-                <div className="slider-wrapper">
-                  <div className="s4-box slider-img">
-                  </div>
-                  <div className="s4-box slider-txt">
-                    <p>Hot Beans Web were great at making my website and making my feelings heard.</p>
-                    <p>Milly, Dino Games</p>
-                  </div>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div className="slider-wrapper">
-                  <div className="s4-box slider-img"></div>
-                  <div className="s4-box slider-txt">
-                    <p>Hot Beans Web were great at making my website and making my feelings heard.</p>
-                    <p>Some person, lol inc.</p>
-                  </div>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div className="slider-wrapper">
-                  <div className="s4-box slider-img"></div>
-                  <div className="s4-box slider-txt">
-                    <p>Hot Beans Web were great at making my website and making my feelings heard.</p>
-                    <p>Some person, lol inc.</p>
-                  </div>
-                </div>
-              </SwiperSlide>
-            </Swiper>
+          <Swiper
+            navigation={true}
+            slidesPerView={3.2}
+            spaceBetween={30}
+            centeredSlides={true}
+            loop={true}
+            modules={[Navigation]}
+            className="mySwiper3"
+          >
+            <SwiperSlide>
+              <div className="site-1">
+                <a href="https://www.freecodecamp.org/" rel="noreferrer" target="_blank" className="site-hover">
+                  <p>FreeCodeCamp</p>
+                  <p>For everything from basic HTML to  Python machine learning all in interactive lessons.</p>
+                  <p>View</p>
+                </a>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="site-2">
+                <a href="https://www.freecodecamp.org/" rel="noreferrer" target="_blank" className="site-hover">
+                  <p>FreeCodeCamp</p>
+                  <p>For everything from basic HTML to  Python machine learning all in interactive lessons.</p>
+                  <p>View</p>
+                </a>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="site-3">
+                <a href="https://www.freecodecamp.org/" rel="noreferrer" target="_blank" className="site-hover">
+                  <p>FreeCodeCamp</p>
+                  <p>For everything from basic HTML to  Python machine learning all in interactive lessons.</p>
+                  <p>View</p>
+                </a>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="site-4">
+                <a href="https://www.freecodecamp.org/" rel="noreferrer" target="_blank" className="site-hover">
+                  <p>FreeCodeCamp</p>
+                  <p>For everything from basic HTML to  Python machine learning all in interactive lessons.</p>
+                  <p>View</p>
+                </a>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="site-5">
+                <a href="https://www.freecodecamp.org/" rel="noreferrer" target="_blank" className="site-hover">
+                  <p>FreeCodeCamp</p>
+                  <p>For everything from basic HTML to  Python machine learning all in interactive lessons.</p>
+                  <p>View</p>
+                </a>
+              </div>
+            </SwiperSlide>
+          </Swiper>
           </section>
           <section className="newsletter">
-
+            <p>Sign up for our newsletter!</p>
+            <form action="">
+              <div className="input-wrapper">
+                <div className="name-box">
+                  <label htmlFor="">Name</label>
+                  <input type="text" />
+                </div>
+                <div className="email-box">
+                  <label htmlFor="">Email</label>
+                  <input type="email" />
+                </div>
+              </div>
+              <input type="submit" className="submit-btn"/>
+            </form>
           </section>
           <Footer />
         </>

@@ -19,7 +19,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
-import './MainPage.scss';
+import './MainPageContent.scss';
 
 import ContactBtn from '../../components/ContactBtn'
 
@@ -36,13 +36,13 @@ export function MainPageContent() {
       <section className="hero">
         <div className="device-wrapper">
           <div className="device-space-phone">
-
+            <img src={phone} alt="" />
           </div>
           <div className="device-space-monitor">
-
+            <img src={phone} alt="" />
           </div>
           <div className="device-space-tablet">
-
+            <img src={phone} alt="" />
           </div>
         </div>
         
