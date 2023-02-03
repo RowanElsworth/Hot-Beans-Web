@@ -62,27 +62,34 @@ export default function App() {
         </div>
       </section>
       <section className="career-contact">
-        <p>For General Career Enquiries</p>
-        <div className="contact-wrapper">
-          <div className="name-container">
-            <label htmlFor="">Full Name</label>
-            <input type="text" name="" id="" />
+        <div className="career-contact-wrapper">
+          <p>For General Career Enquiries</p>
+          <div className="contact-wrapper">
+            <form action="">
+              <div className="name-container">
+                <label htmlFor="">Full Name</label>
+                <input type="text" name="" id="" />
+              </div>
+              <div className="email-container">
+                <label htmlFor="">Email</label>
+                <input type="email" name="" id="" />
+              </div>
+              <div className="text-container">
+                <label htmlFor="">Your message</label>
+                <textarea name="" id="" cols="30" rows="10"></textarea>
+              </div>
+              <div className="upload-container">
+                <label htmlFor="">Upload CV</label>
+                <input type="file" name="" id="" />
+              </div>
+              <div className="submit-container">
+                <input type="submit" name="" id="" />
+              </div>
+            </form>
           </div>
-          <div className="email-container">
-            <label htmlFor="">Email</label>
-            <input type="email" name="" id="" />
-          </div>
-          <div className="text-container">
-            <label htmlFor="">Your message</label>
-            <textarea name="" id="" cols="30" rows="10"></textarea>
-          </div>
-          <div className="upload-container">
-            <label htmlFor="">Upload CV</label>
-            <input type="file" name="" id="" />
-          </div>
-          <div className="submit-container">
-            <input type="submit" name="" id="" />
-          </div>
+        </div>
+        <div className="contact-img">
+          
         </div>
       </section>
       <section>
