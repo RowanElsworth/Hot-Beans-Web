@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+@import "./src/variables.scss";
+
+html {
+  font-size: 62.5%;
+}
+
+header {
+  width: 100%;
+  height: $header-height;
+  padding: 0 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  z-index: 4;
+  mix-blend-mode: difference;
+
+  p {
+    font-size: 38px;
+    color: #FF005C;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+  }
+  a {
+    text-decoration: none;
+  }
+
+  .burger-menu {
+    position: relative;
+    .burger-menu-button {
+      all: unset;
+      position: relative;
+      display: block;
+      z-index: 5;
+      cursor: pointer;
+      font-size: 38px;
+      // not able to select the text
+      -webkit-user-select: none; // Safari
+      -ms-user-select: none; // IE 10 and IE 11
+      user-select: none; // Standard syntax
+      .burger-btn {
+        position: relative;
+        width: 4rem;
+        height: 4rem;
+        display: flex;
+        justify-content: space-around;
+        flex-flow: column nowrap;
+        
+        .burger-btn-line {
+          width: 4rem;
+          height: 0.5rem;
+          border-radius: 15px;
+          background-color: $accent-main;
+          transform-origin: 1px;
+          transition: all 0.4s ease;
+        }
+        .burger1 {
+          transform: rotate(0deg);
+        }
+        .burger2 {
+          opacity: 1;
+        }
+        .burger3 {
+          transform: rotate(0deg);
+        }
+        .burger1.open {
+          transform: rotate(45deg);
+        }
+        .burger2.open {
+          transform: translateX(100%);
+          opacity: 0;
+        }
+        .burger3.open {
+          transform: rotate(-45deg);
+        }
+      }
+    }
+  }
+}
+
+// burger menu
+.burger-menu-nav {
+  width: 400px;
+  max-height: 60vh;
+  background-color: $bg-dark;
+  padding: 50px 0 50px 25px;
+  position: absolute;
+  top: 10px;
+  right: 50px;
+  z-index: 3;
+  border-radius: 25px;
+  opacity: 0;
+  visibility: hidden; // I think visability is gonna cause issues
+  transition: all 0.4s ease-in-out;
+  .pages-nav ul li a {
+    font-size: 3.2rem;
+    color: white;
+    transition: 0.4s;
+    overflow: hidden;
+    position: relative;
+    text-decoration: none;
+  }
+  .pages-nav ul li a::before {
+    content: '→';
+    position: absolute;
+    opacity: 0;
+    left: -60px;
+    transition: 0.4s;
+  }
+  .pages-nav ul li a:hover {
+    padding-left: 40px;
+  }
+  .pages-nav ul li a:hover::before {
+    opacity: 1;
+    left: 0px;
+  }
+  .socials-nav ul{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .socials-nav ul li {
+    min-width: 50%;
+  }
+  .socials-nav ul a {
+    font-size: 2.4rem;
+    color: white;
+    text-decoration: none;
+  }
+  .socials-nav ul a::after {
+    content: "";
+    display: block;
+    height: 2.5px;
+    width: 0;
+    background-color: #fff;
+    transition: 0.2s width linear;
+    margin: 0 auto;
+    border-radius: 50px;
+  }
+  .socials-nav ul a:hover::after {
+    width: 100%;
+  }
+}
+
+// burger menu show
+.burger-menu-nav.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.burger-menu-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+// changes page if active
+.active-page {
+  // color: blue !important;
+  text-decoration: underline !important;
+}
+
+@media only screen and (max-width: 1400px) {
+  header {
+    padding: 0 40px;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  header {
+    padding: 0 20px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  header {
+    padding: 0 12px;
+  }
+}
+
+@media only screen and (max-width: 300px) {
+  header {
+    padding: 0 2px;
+  }
+}

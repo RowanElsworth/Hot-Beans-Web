@@ -8,6 +8,7 @@ import Portfolio from './pages/Portfolio/Portfolio';
 import Careers from './pages/Careers/Careers';
 import Contact from './pages/Contact/Contact';
 import Recources from './pages/Recources/Recources';
+import PageNotFound from './pages/PageNotFound/PageNotFound'
 
 export default function App() {
   return (
@@ -20,6 +21,7 @@ export default function App() {
         <Route path="Careers" element={<Careers />} />
         <Route path="Contact" element={<Contact />} />
         <Route path="Recources" element={<Recources />} />
+        <Route path="*" element={<PageNotFound />} />
       </Routes>
     </BrowserRouter>
   );

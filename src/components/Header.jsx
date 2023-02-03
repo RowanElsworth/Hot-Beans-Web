@@ -1,29 +1,61 @@
 
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
 
-import BurgerBtn from "./BurgerBtn"
-import "./Header.module.scss"
+import "./Header.scss";
 
 export function Header() {
-  
-  const [burgerOpen, setBurgerOpen] = useState(false);
+  const [display, setDisplay] = useState(false);
+  const menuRef = useRef(null);
 
-  const toggleBurger = () =>{
-      setBurgerOpen(!burgerOpen)
-  }
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (menuRef.current && !menuRef.current.contains(event.target)) {
+        setDisplay(false);
+      }
+    };
+    document.addEventListener("click", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("click", handleClickOutside);
+    };
+  }, [menuRef]);
 
   return ( 
     <>
-      <div className="burger-menu">
+      <header className="color-change">
+        {/* logo */}
+        <Link to="/"><p>Hot Beans</p></Link>
+        {/* burger button */}
+        <div ref={menuRef} className="burger-menu">
+          <button
+            className="burger-menu-button"
+            aria-label={display ? "Close menu" : "Open menu"}
+            aria-expanded={display}
+            tabIndex={0}
+            onClick={() => setDisplay(!display)}
+          >
+            <div className="burger-btn">
+              <div className={`burger-btn-line burger1 ${display ? 'open' : ''}`}></div>
+              <div className={`burger-btn-line burger2 ${display ? 'open' : ''}`}></div>
+              <div className={`burger-btn-line burger3 ${display ? 'open' : ''}`}></div>
+            </div>
+          </button>
+        </div>
+      </header>
+      {/* burger menu */}
+      <nav
+        className={`burger-menu-nav ${display ? "show": ""}`}
+        aria-hidden={!display}
+      >
         <div className="pages-nav">
           <ul>
-            <li><Link to="/">Home</Link></li>
-            <li><Link to="/About">About</Link></li>
-            <li><Link to="/Portfolio">Portfolio</Link></li>
-            <li><Link to="/Careers">Careers</Link></li>
-            <li><Link to="/Contact">Contact</Link></li>
-            <li><Link to="/Recources">Recources</Link></li>
+            <li><Link to="/" className={window.location.pathname === "/" ? "active-page" : ""}>Home</Link></li>
+            <li><Link to="/About" className={window.location.pathname === "/About" ? "active-page" : ""}>About</Link></li>
+            <li><Link to="/Portfolio" className={window.location.pathname === "/Portfolio" ? "active-page" : ""}>Portfolio</Link></li>
+            <li><Link to="/Careers" className={window.location.pathname === "/Careers" ? "active-page" : ""}>Careers</Link></li>
+            <li><Link to="/Contact" className={window.location.pathname === "/Contact" ? "active-page" : ""}>Contact</Link></li>
+            <li><Link to="/Recources" className={window.location.pathname === "/Recources" ? "active-page" : ""}>Recources</Link></li>
           </ul>
         </div>
         <div className="socials-nav">
@@ -34,78 +66,7 @@ export function Header() {
             <li><a href="/" rel="noreferrer" target="_blank">Instagram</a></li>
           </ul>
         </div>
-      </div>
-      <header>
-        <Link to="/"><p className="text-blend">Hot Beans</p></Link>
-        <div onClick={toggleBurger}>
-          <BurgerBtn isOpen={burgerOpen} />
-        </div>
-      </header>
-
-      <style jsx>{`
-      a {
-        text-decoration: none;
-      }
-      .burger-menu {
-        background-color: #1C1F2F;
-        position: fixed;
-        width: ${burgerOpen ? '400px' : 0};
-        max-height: ${burgerOpen ? '60vh' : 0};
-        padding: ${burgerOpen ? '50px 25px' : 0};
-        top: 5px;
-        right: 65px;
-        z-index: 3;
-        border-radius: 25px;
-        opacity: ${burgerOpen ? 1 : 0};
-        transition: all 0.6s ease-in-out;
-      }
-      .pages-nav ul li a {
-        font-size: ${burgerOpen ? '3.2rem' : 0};
-        color: white;
-        transition: 0.4s;
-        overflow: hidden;
-        position: relative;
-      }
-      .pages-nav ul li a::before {
-        content: '→';
-        position: absolute;
-        opacity: 0;
-        left: -60px;
-        transition: 0.4s;
-      }
-      .pages-nav ul li a:hover {
-        padding-left: 40px;
-      }
-      .pages-nav ul li a:hover::before {
-        opacity: 1;
-        left: 0px;
-      }
-      .socials-nav ul{
-        width: 100%;
-        display: flex;
-        flex-wrap: wrap;
-      }
-      .socials-nav ul li {
-        min-width: 50%;
-      }
-      .socials-nav ul a {
-        font-size: ${burgerOpen ? '2.4rem' : 0};
-        color: white;
-      }
-      .socials-nav ul a::after {
-        content: "";
-        display: block;
-        height: 2.5px;
-        width: 0;
-        background-color: #fff;
-        transition: 0.2s width linear;
-        margin: 0 auto;
-        border-radius: 50px;
-      }
-      .socials-nav ul a:hover::after {
-        width: 100%;
-      }
-      `}</style>
+      </nav>
     </>    
   )
 }

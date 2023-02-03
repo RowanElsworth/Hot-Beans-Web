@@ -1,0 +1,33 @@
+
+@import "./src/variables.scss";
+
+.burger-btn{
+  position: relative;
+  width: 4rem;
+  height: 4rem;
+  display: flex;
+  justify-content: space-around;
+  flex-flow: column nowrap;
+  cursor: pointer;
+  z-index: 3;
+}
+.burger{
+  width: 4rem;
+  height: 0.5rem;
+  border-radius: 15px;
+  background-color: #FF005C;
+  transform-origin: 1px;
+  transition: all 0.4s linear;
+}
+.burger1.open {
+  transform: rotate(45deg);
+}
+
+.burger2.open {
+  transform: translateX(100%);
+  opacity: 0;
+}
+
+.burger3.open {
+  transform: rotate(-45deg);
+}
