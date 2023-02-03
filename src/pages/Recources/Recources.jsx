@@ -45,8 +45,8 @@ export default function App() {
             </SwiperSlide>
             <SwiperSlide>
               <div className="site-2">
-                <a href="https://www.freecodecamp.org/" rel="noreferrer" target="_blank" className="site-hover">
-                  <p>FreeCodeCamp</p>
+                <a href="https://www.w3schools.com/" rel="noreferrer" target="_blank" className="site-hover">
+                  <p>w3schools</p>
                   <p>For everything from basic HTML to  Python machine learning all in interactive lessons.</p>
                   <p>View</p>
                 </a>
@@ -54,8 +54,8 @@ export default function App() {
             </SwiperSlide>
             <SwiperSlide>
               <div className="site-3">
-                <a href="https://www.freecodecamp.org/" rel="noreferrer" target="_blank" className="site-hover">
-                  <p>FreeCodeCamp</p>
+                <a href="https://www.khanacademy.org/" rel="noreferrer" target="_blank" className="site-hover">
+                  <p>khanacademy</p>
                   <p>For everything from basic HTML to  Python machine learning all in interactive lessons.</p>
                   <p>View</p>
                 </a>
@@ -63,8 +63,8 @@ export default function App() {
             </SwiperSlide>
             <SwiperSlide>
               <div className="site-4">
-                <a href="https://www.freecodecamp.org/" rel="noreferrer" target="_blank" className="site-hover">
-                  <p>FreeCodeCamp</p>
+                <a href="https://www.codecademy.com/" rel="noreferrer" target="_blank" className="site-hover">
+                  <p>codecademy</p>
                   <p>For everything from basic HTML to  Python machine learning all in interactive lessons.</p>
                   <p>View</p>
                 </a>

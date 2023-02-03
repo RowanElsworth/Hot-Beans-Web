@@ -28,6 +28,7 @@ import hotBeansGif from './hotBeans.gif';
 import globey from './globey2.png';
 import phone from './phone-outline.png';
 import dino from './testimonial-dino.png'
+import rock from './rock.png';
 
 export function MainPageContent() {
   return (
@@ -116,16 +117,20 @@ export function MainPageContent() {
           </SwiperSlide>
           <SwiperSlide>
             <div className="slider-wrapper">
-              <div className="s4-box slider-img"></div>
+              <div className="s4-box slider-img">
+                <img src={rock} alt="" />
+              </div>
               <div className="s4-box slider-txt">
-                <p>Hot Beans Web were great at making my website and making my feelings heard.</p>
-                <p>Some person, lol inc.</p>
+                <p>Constantly throughout the project I had constant communication from friendly and enthusiastic people who knew what they were talking about. Working with Hot Beans Web was a breeze.</p>
+                <p>Fern, Rocky Games</p>
               </div>
             </div>
           </SwiperSlide>
           <SwiperSlide>
             <div className="slider-wrapper">
-              <div className="s4-box slider-img"></div>
+              <div className="s4-box slider-img">
+                <img src={dino} alt="" />
+              </div>
               <div className="s4-box slider-txt">
                 <p>Hot Beans Web were great at making my website and making my feelings heard.</p>
                 <p>Some person, lol inc.</p>

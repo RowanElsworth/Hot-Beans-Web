@@ -61,19 +61,22 @@ form, input {
 
 // articles
 .site-1 {
-  background-image: url("./dino.png");
+  background-image: url("./freeCodeCamp.png");
   background-size: cover;
 }
 .site-2 {
-  background-image: url("./dino.png");
-  background-size: cover;
+  background-color: white;
+  background-image: url("./w3schools.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 .site-3 {
-  background-image: url("./dino.png");
+  background-image: url("./khanAcademy.png");
   background-size: cover;
 }
 .site-4 {
-  background-image: url("./dino.png");
+  background-image: url("./codecademy.png");
   background-size: cover;
 }
 .site-5 {
