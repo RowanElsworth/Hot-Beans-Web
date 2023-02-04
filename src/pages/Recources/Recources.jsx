@@ -81,22 +81,6 @@ export default function App() {
             </SwiperSlide>
           </Swiper>
           </section>
-          <section className="newsletter">
-            <p>Sign up for our newsletter!</p>
-            <form action="">
-              <div className="input-wrapper">
-                <div className="name-box">
-                  <label htmlFor="">Name</label>
-                  <input type="text" />
-                </div>
-                <div className="email-box">
-                  <label htmlFor="">Email</label>
-                  <input type="email" />
-                </div>
-              </div>
-              <input type="submit" className="submit-btn"/>
-            </form>
-          </section>
           <Footer />
         </>
     )

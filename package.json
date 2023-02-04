@@ -9,16 +9,13 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "atropos": "^1.0.2",
-    "formik": "^2.2.9",
     "react": "^18.2.0",
-    "react-click-outside": "github:tj/react-click-outside",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
     "sass": "^1.57.1",
     "styled-components": "^5.3.6",
     "swiper": "^8.4.6",
-    "web-vitals": "^2.1.4",
-    "yup": "^0.32.11"
+    "web-vitals": "^2.1.4"
   },
   "scripts": {
     "start": "react-scripts start",

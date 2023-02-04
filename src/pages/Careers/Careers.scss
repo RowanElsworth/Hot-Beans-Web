@@ -21,51 +21,39 @@ section {
   align-items: center;
   justify-content: center;
   .box-container {
-    width: 70%;
-    height: 70%;
+    width: 75%;
+    height: 75%;
     display: grid;
     grid-template-rows: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
     // grid
-    --margin: 75px;
+    --margin: 35px;
     margin: var(--margin);
     grid-gap: var(--margin);
     gap: var(--margin);
   }
   .career-box {
-    background-color: $accent-main;
-    color: white;
+    background-color: $accent-light;
+    color: $bg-dark;
     border-radius: 2rem;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    padding: 0 20px;
+    justify-content: space-between;
+    padding: 40px 30px;
+    text-decoration: none;
   }
-  p:nth-of-type(1) {
+  .position-title {
+      font-size: min(max(1.8rem, 4vw), 3.6rem);
+      font-weight: $font-bold;
+  }
+  .position-desc {
+      font-size: min(max(1.8rem, 4vw), 2.6rem);
+      font-weight: $font-semibold;
+  }
+  .position-view {
     font-size: min(max(1.8rem, 4vw), 3.6rem);
-    font-weight: $font-bold;
-  }
-  p:nth-of-type(2) {
-    font-size: min(max(1.8rem, 4vw), 2.6rem);
-    font-weight: $font-bold;
-  }
-  li {
-    list-style-type: disc;
-    margin-left: 17px;
-    font-size: min(max(1.8rem, 4vw), 1.8rem);
-  }
-  p:nth-of-type(3) {
-    font-size: min(max(1.8rem, 4vw), 2.6rem);
-    font-weight: $font-bold;
-  }
-  a {
-    font-size: min(max(1.8rem, 4vw), 2.6rem);
-    color: white;
+    font-weight: $font-semibold;
     text-decoration: underline;
-    display: inline-block;
-  }
-  a:hover {
-    color: blue;
   }
 }
 
@@ -102,9 +90,6 @@ section {
         width: 100%;
         border-radius: 1rem;
       }
-    }
-    .upload-container {
-
     }
     .submit-container {
       width: 50%;

@@ -20,6 +20,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
 import './MainPageContent.scss';
+import './Clouds.scss'
 
 import ContactBtn from '../../components/ContactBtn'
 
@@ -110,7 +111,7 @@ export function MainPageContent() {
                 <img src={dino} alt="" />
               </div>
               <div className="s4-box slider-txt">
-                <p>Hot Beans Web were great at making my website and making my feelings heard.</p>
+                <p>Hot Beans Web were great at making my website but more importantly making my feelings heard ensuring that I was put first.</p>
                 <p>Milly, Dino Games</p>
               </div>
             </div>
@@ -141,7 +142,25 @@ export function MainPageContent() {
       </section>
 
       {/* section 5 */}
-      <section className="s5">
+      <section className="clouds">
+          <div class="initialCloud">
+            <svg id="svgCloud" data-name="clouder" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 348 164"><defs><style></style></defs><path class="cloud1Fill" d="M348,107.5a54.5,54.5,0,0,1-94.87,36.61,77.55,77.55,0,0,1-81.57-1.43A73,73,0,0,1,71,145.07,42.48,42.48,0,1,1,49.61,71.59,73,73,0,0,1,154.85,26.84,77.51,77.51,0,0,1,287.16,53.37,53,53,0,0,1,293.5,53,54.5,54.5,0,0,1,348,107.5Z"/></svg>
+          </div>
+          <div class="firstCloud">
+            <svg id="svgCloud" data-name="clouder" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 348 164"><defs><style></style></defs><path class="cloud1Fill" d="M348,107.5a54.5,54.5,0,0,1-94.87,36.61,77.55,77.55,0,0,1-81.57-1.43A73,73,0,0,1,71,145.07,42.48,42.48,0,1,1,49.61,71.59,73,73,0,0,1,154.85,26.84,77.51,77.51,0,0,1,287.16,53.37,53,53,0,0,1,293.5,53,54.5,54.5,0,0,1,348,107.5Z"/></svg>
+          </div>
+          <div class="secondCloud">
+            <svg id="svgCloud" data-name="clouder" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 348 164"><defs><style></style></defs><path class="cloud1Fill" d="M348,107.5a54.5,54.5,0,0,1-94.87,36.61,77.55,77.55,0,0,1-81.57-1.43A73,73,0,0,1,71,145.07,42.48,42.48,0,1,1,49.61,71.59,73,73,0,0,1,154.85,26.84,77.51,77.51,0,0,1,287.16,53.37,53,53,0,0,1,293.5,53,54.5,54.5,0,0,1,348,107.5Z"/></svg>
+          </div>
+          <div class="thirdCloud">
+            <svg id="svgCloud" data-name="clouder" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 348 164"><defs><style></style></defs><path class="cloud1Fill" d="M348,107.5a54.5,54.5,0,0,1-94.87,36.61,77.55,77.55,0,0,1-81.57-1.43A73,73,0,0,1,71,145.07,42.48,42.48,0,1,1,49.61,71.59,73,73,0,0,1,154.85,26.84,77.51,77.51,0,0,1,287.16,53.37,53,53,0,0,1,293.5,53,54.5,54.5,0,0,1,348,107.5Z"/></svg>
+          </div>
+          <div class="fourthCloud">
+            <svg id="svgCloud" data-name="clouder" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 348 164"><defs><style></style></defs><path class="cloud1Fill" d="M348,107.5a54.5,54.5,0,0,1-94.87,36.61,77.55,77.55,0,0,1-81.57-1.43A73,73,0,0,1,71,145.07,42.48,42.48,0,1,1,49.61,71.59,73,73,0,0,1,154.85,26.84,77.51,77.51,0,0,1,287.16,53.37,53,53,0,0,1,293.5,53,54.5,54.5,0,0,1,348,107.5Z"/></svg>
+          </div>
+          <div class="fifthCloud">
+            <svg id="svgCloud" data-name="clouder" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 348 164"><defs><style></style></defs><path class="cloud1Fill" d="M348,107.5a54.5,54.5,0,0,1-94.87,36.61,77.55,77.55,0,0,1-81.57-1.43A73,73,0,0,1,71,145.07,42.48,42.48,0,1,1,49.61,71.59,73,73,0,0,1,154.85,26.84,77.51,77.51,0,0,1,287.16,53.37,53,53,0,0,1,293.5,53,54.5,54.5,0,0,1,348,107.5Z"/></svg>
+          </div>
         <Swiper
           navigation={true}
           slidesPerView={3.2}

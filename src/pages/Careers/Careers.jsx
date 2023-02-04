@@ -1,97 +1,98 @@
 
+import { Link } from "react-router-dom";
 import { useEffect } from "react";
+
 
 import { Header } from "../../components/Header"
 import { Footer } from "../../components/footer"
 
 import "./Careers.scss"
 
+
 export default function App() {
   useEffect(() => {
     document.title = "Hot Beans Web | Careers"
   }, []);
+
   return (
     <>
     <Header></Header>
       <section className="career-select">
         <div className="box-container">
-          <div className="career-box">
-            <p>Lead Front-end Developer</p>
-            <p>Requirements</p>
-            <ul>
-              <li>5 years experience</li>
-              <li>a</li>
-              <li>a</li>
-            </ul>
-            <p className="apply">To Apply:</p>
-            <a href="mailto:">AnEmail@email.com</a>
-          </div>
-          <div className="career-box">
-            <p>Front-end Developer</p>
-            <p>Requirements</p>
-            <ul>
-              <li>a</li>
-              <li>a</li>
-              <li>a</li>
-            </ul>
-            <p className="apply">To Apply:</p>
-            <a href="mailto:">AnEmail@email.com</a>
-          </div>
-          <div className="career-box">
-            <p>Front-end Developer</p>
-            <p>Requirements</p>
-            <ul>
-              <li>a</li>
-              <li>a</li>
-              <li>a</li>
-            </ul>
-            <p className="apply">To Apply:</p>
-            <a href="mailto:">AnEmail@email.com</a>
-          </div>
-          <div className="career-box">
-            <p className="title">Front-end Developer</p>
-            <p>Requirements</p>
-            <ul>
-              <li>a</li>
-              <li>a</li>
-              <li>a</li>
-            </ul>
-            <p className="apply">To Apply:</p>
-            <a href="mailto:">AnEmail@email.com</a>
-          </div>
+          <Link to="/" className="career-box">
+            <div className="top-txt-container">
+              <p className="position-title">Lead Front End Developer</p>
+              <p className="position-desc">Do you have the top-notch skills and the ability to required manage a team?</p>
+            </div>
+            <p className="position-view">View Position</p>
+          </Link>
+          <Link to="/" className="career-box">
+            <div className="top-txt-container">
+              <p className="position-title">Back End Developer</p>
+              <p className="position-desc">Take your back end development skills to the next level.</p>
+            </div>
+            <p className="position-view">View Position</p>
+          </Link>
+          <Link to="/" className="career-box">
+            <div className="top-txt-container">
+              <p className="position-title">Front End Developer</p>
+              <p className="position-desc">Are you wanting to be a part of our creative team?</p>
+            </div>
+            <p className="position-view">View Position</p>
+          </Link>
+          <Link to="/" className="career-box">
+            <div className="top-txt-container">
+              <p className="position-title">Graphic Designer</p>
+              <p className="position-desc">Unleash your creative potential.</p>
+            </div>
+            <p className="position-view">View Position</p>
+          </Link>
         </div>
       </section>
       <section className="career-contact">
-        <div className="career-contact-wrapper">
-          <p>For General Career Enquiries</p>
-          <div className="contact-wrapper">
-            <form action="">
-              <div className="name-container">
-                <label htmlFor="">Full Name</label>
-                <input type="text" name="" id="" />
-              </div>
-              <div className="email-container">
-                <label htmlFor="">Email</label>
-                <input type="email" name="" id="" />
-              </div>
-              <div className="text-container">
-                <label htmlFor="">Your message</label>
-                <textarea name="" id="" cols="30" rows="10"></textarea>
-              </div>
-              <div className="upload-container">
-                <label htmlFor="">Upload CV</label>
-                <input type="file" name="" id="" />
-              </div>
-              <div className="submit-container">
-                <input type="submit" name="" id="" />
-              </div>
-            </form>
-          </div>
+      <div className="career-contact-wrapper">
+        <p>For General Career Enquiries</p>
+        <div className="contact-wrapper">
+          <form
+            action="https://formspree.io/f/mwkjvjay"
+            method="POST"
+            enctype="multipart/form-data"
+          >
+            <div className="name-container">
+              <label htmlFor="">Full Name</label>
+              <input
+                type="text"
+                name="name"
+                id="name"
+              />
+            </div>
+            <div className="email-container">
+              <label htmlFor="">Email</label>
+              <input
+                type="email"
+                name="email"
+                id="email"
+              />
+            </div>
+            <div className="text-container">
+              <label htmlFor="">Your message</label>
+              <textarea
+                name="message"
+                id="message"
+                cols="30"
+                rows="10"
+              />
+            </div>
+            <div className="submit-container">
+              <input type="submit" value="Submit" />
+            </div>
+          </form>
         </div>
-        <div className="contact-img">
+      </div>
+      <div className="contact-img">
           
-        </div>
-      </section>
+      </div>
+    </section>
       <section>
         <Footer />
       </section>
