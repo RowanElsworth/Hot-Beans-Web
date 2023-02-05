@@ -7,7 +7,7 @@ import { Header } from "../../components/Header"
 import { Footer } from "../../components/footer"
 import "./About.scss"
 
-import Sam from "./Sam.png"
+import Sam from "./Sam no BG.png"
 
 export default function App() {
   useEffect(() => {
@@ -58,7 +58,7 @@ export default function App() {
         <div className="team-container">
           <div className="team-box">
             <div className="team-left">
-              <div className="team-img">
+              <div className="team-img-container">
                 <img src="" alt="" />
               </div>
               <p>Andre</p>
@@ -70,7 +70,7 @@ export default function App() {
           </div>
           <div className="team-box">
             <div className="team-left">
-              <div className="team-img">
+              <div className="team-img-container">
                 <img src="" alt="Sam with a karen hair style" />
               </div>
               <p>Karen</p>
@@ -82,7 +82,7 @@ export default function App() {
           </div>
           <div className="team-box">
             <div className="team-left">
-              <div className="team-img">
+              <div className="team-img-container">
                 <img src={Sam} alt="Our most loved tech intern Sam smiling with his thumbs up." />
               </div>
               <p>Sam</p>

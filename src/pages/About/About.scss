@@ -62,19 +62,23 @@
       width: 100%;
       display: flex;
       .team-left {
-        outline: 1px solid orange;
+        background-color: orange;
         width: 20%;
         display: flex;
         align-items: center;
         flex-direction: column;
-        .team-img {
+        .team-img-container {
           outline: 1px solid blue;
           width: 200px;
           height: 200px;
           border-radius: 100%;
           img {
             width: 100%;
-            height: 100%;
+            height: 120%;
+            transition: translate 0.5s;
+          }
+          img:hover {
+            translate: 0 -10% 0;
           }
         }
         p:nth-of-type(1) {

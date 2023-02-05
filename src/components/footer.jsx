@@ -16,7 +16,7 @@ export function Footer() {
             <li><Link to="/Recources" className={window.location.pathname === "/Recources" ? "active-page" : ""}>Recources</Link></li>
           </ul>
         </nav>
-        <p>Designed and created by Rowan Elsworth</p>
+        <p>Website designed and created by Rowan Elsworth | Custom artwork by Milly-Fern Elsworth</p>
       </footer>
     </section>
   )

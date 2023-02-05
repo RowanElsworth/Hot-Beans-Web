@@ -1,11 +1,6 @@
 
 import { Link } from 'react-router-dom';
-
-// Atropos
-// import Atropos component
-import Atropos from 'atropos/react';
-// import Atropos styles
-import 'atropos/css';
+import { useState, useEffect } from 'react';
 
 // Swiper
 // Import Swiper React components
@@ -27,25 +22,40 @@ import ContactBtn from '../../components/ContactBtn'
 import s2example from './s2-example.png';
 import hotBeansGif from './hotBeans.gif';
 import globey from './globey2.png';
-import phone from './phone-outline.png';
 import dino from './testimonial-dino.png'
 import rock from './rock.png';
 
 export function MainPageContent() {
+  // For images
+  const [index, setIndex] = useState(0);
+  const [, setSelected] = useState(null);
+  const images = [
+    hotBeansGif,
+    s2example,
+    dino,
+    rock
+  ];
+
+  // Changes effect every 5 seconds
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setIndex((index + 1) % images.length);
+    }, 5000);
+    return () => clearInterval(intervalId);
+  }, [index, images.length]);
+
+  // Click handler
+  const handleClick = index => {
+    setIndex(index);
+    setSelected(index);
+  };
+
   return (
     <div className="snap-wrapper">
       {/* Hero */}
       <section className="hero">
-        <div className="device-wrapper">
-          <div className="device-space-phone">
-            <img src={phone} alt="" />
-          </div>
-          <div className="device-space-monitor">
-            <img src={phone} alt="" />
-          </div>
-          <div className="device-space-tablet">
-            <img src={phone} alt="" />
-          </div>
+        <div className="rocket-ship">
+          <img src="" alt="" />
         </div>
         
         <div className="launch-station">
@@ -68,28 +78,43 @@ export function MainPageContent() {
 
       {/* section 3 */}
       <section className="s3">
-        <div className="s3-top-wrapper">
-          <h2>Just some features we offer you</h2>
-          <Atropos className="s3-phone-atropos">
-            <img src={phone} alt="" className="s3-phone"/>
-          </Atropos>
+        <div className="s3-left-wrapper">
+          <div className={index === 0 ? "s3-box s3-box-active" : "s3-box"} onClick={() => handleClick(0)}>
+            <div className="s3-box-icon">
+            </div>
+            <div className="s3-box-text">
+              <p>Unique designs</p>
+              <p>Where everything is built from scratch, no templates</p>
+            </div>
+          </div>
+          <div className={index === 1 ? "s3-box s3-box-active" : "s3-box"} onClick={() => handleClick(1)}>
+            <div className="s3-box-icon">
+            </div>
+            <div className="s3-box-text">
+              <p>Flexible creation</p>
+              <p>Around your needs to ensure we deliver the best product that suits you</p>
+            </div>
+          </div>
+          <div className={index === 2 ? "s3-box s3-box-active" : "s3-box"} onClick={() => handleClick(2)}>
+            <div className="s3-box-icon">
+            </div>
+            <div className="s3-box-text">
+              <p>Brilliant SEO</p>
+              <p>Ensures that your site is the one that is viewed, not your competitors</p>
+            </div>
+          </div>
+          <div className={index === 3 ? "s3-box s3-box-active" : "s3-box"} onClick={() => handleClick(3)}>
+            <div className="s3-box-icon">
+            </div>
+            <div className="s3-box-text">
+              <p>Reponsive design</p>
+              <p>Making your site look and feel great on all devices so all clients can be reached</p>
+            </div>
+          </div>
         </div>
-        <div className="info-wrapper">
+        <div className="s3-right-wrapper">
           <div>
-            <p>Unique designs</p>
-            <p>Where everything is built from scratch, not from a template</p>
-          </div>
-          <div>
-            <p>Flexible creation</p>
-            <p>Around your needs to ensure we deliver the best product that suits you</p>
-          </div>
-          <div>
-            <p>Brilliant SEO</p>
-            <p>Ensures that your site is the one that is viewed, not your competitors</p>
-          </div>
-          <div>
-            <p>Reponsive design</p>
-            <p>Making your site look and feel great on all devices so all clients can be reached</p>
+            <img src={images[index]} alt="Slider" />
           </div>
         </div>
       </section>

@@ -32,7 +32,7 @@ form, input {
           display: flex;
           flex-direction: column;
           justify-content: center;
-          border-radius: 0 0 2rem 2rem;
+          border-radius: 2rem;
           p:nth-of-type(1) {
             color: white;
             font-size: min(max(1.8rem, 4vw), 3.6rem);

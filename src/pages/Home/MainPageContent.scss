@@ -42,25 +42,34 @@ section {
   height: 100vh;
   background-image: url("./background.png");
   background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-  .device-wrapper {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 75px;
+  .rocket-ship {
+    animation: ad-bob 3s infinite linear;
+    width: 400px;
+    height: 1000px;
+    transform: rotate(90deg);
+    background-color: white;
+  }
+}
 
-    div {
-      width: 300px;
-      height: 300px;
-      background-color: grey;
-
-      img {
-        width: 100%;
-        height: 100%;
-      }
-    }
+@keyframes ad-bob {
+  0% {
+    translate: 0;
+  }
+  25% {
+    translate: 0 2%;
+  }
+  50% {
+    translate: 0;
+  }
+  75% {
+    translate: 0 -2%;
+  }
+  100% {
+    translate: 0;
   }
 }
 
@@ -109,69 +118,94 @@ section {
   width: 100%;
   height: 100vh;
   display: flex;
-  flex-direction: column;
-  padding: 70px 0 20px 0;
+  padding: 70px 20px;
   background-image: url("./background.png");
   background-attachment: fixed;
 
-  .s3-top-wrapper {
+  .s3-left-wrapper {
     width: 100%;
-    height: 50vh;
-    padding: 0 170px;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-
-    h2 {
-      width: 60%;
-      font-size: min(max(1.8rem, 4vw), 5.5rem);
-      font-weight: $font-semibold;
-    }
-  }
-  .info-wrapper {
-    width: 100%;
-    height: 50vh;
-    padding: 0 60px;
+    height: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    div {
-      width: 400px;
-      height: 300px;
+    flex-direction: column;
+
+    .s3-box {
+      width: 100%;
+      height: 24%;
       background-color: $accent-main;
       color: $text-light;
-      padding: 20px;
+      padding: 20px 60px;
+      border: 2px solid white;
+      border-radius: 2rem;
       display: flex;
       align-items: center;
       justify-content: center;
-      flex-direction: column;
-      gap: 20px;
-      p:nth-of-type(1) {
-        font-size: min(max(1.8rem, 4vw), 3.8rem);
-        font-weight: $font-bold;
-        text-align: center;
-        text-shadow: 2px 4px 4px rgba(0,0,0,0.6);
+      position: relative;
+      cursor: pointer;
+      transition: all 0.4s;
+      .s3-box-icon {
+        width: 150px;
+        height: 150px;
+        border: 1px solid white;
+        border-radius: 100%;
       }
-      p:nth-of-type(2) {
-        font-size: min(max(1.8rem, 4vw), 2.6rem);
-        font-weight: $font-semibold;
-        text-align: center;
-        text-shadow: 2px 4px 4px rgba(0,0,0,0.6);
+      .s3-box-text {
+        width: calc(100% - 150px);
+        height: 100%;
+        padding: 0 7%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        p:nth-of-type(1) {
+          font-size: min(max(1.8rem, 4vw), 3.8rem);
+          font-weight: $font-bold;
+          text-align: center;
+          text-shadow: 2px 4px 4px rgba(0,0,0,0.6);
+        }
+        p:nth-of-type(2) {
+          font-size: min(max(1.8rem, 4vw), 2.6rem);
+          font-weight: $font-semibold;
+          text-align: center;
+          text-shadow: 2px 4px 4px rgba(0,0,0,0.6);
+        }
       }
+    }
+    .s3-box-active {
+      box-shadow: inset 7px 7px 10px #000;
+    }
+    .s3-box-active::after {
+      content: "";
+      width: 100%;
+      height: 3%;
+      position: absolute;
+      bottom: 0;
+      animation: load-bar 5s linear infinite;
+      background-color: blue;
+    }
+  }
+
+  .s3-right-wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    div img {
+      width: 100%;
+      height: 100%;
     }
   }
 }
 
-// atropos
-.s3-phone-atropos {
-  width: 20%;
-  height: 100%;
-  z-index: 2;
-}
-
-.s3-phone {
-  width: 100%;
-  height: 100%;
+@keyframes load-bar {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
 }
 
 // Section 4 Horizontal carousel
