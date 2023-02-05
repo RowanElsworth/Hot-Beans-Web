@@ -188,9 +188,23 @@ export function MainPageContent() {
           </div>
         <Swiper
           navigation={true}
-          slidesPerView={3.2}
+          slidesPerView={1.05}
           spaceBetween={30}
           centeredSlides={true}
+          breakpoints={{
+            600: {
+              slidesPerView: 1.2,
+              spaceBetween: 20,
+            },
+            1100: {
+              slidesPerView: 2.2,
+              spaceBetween: 30,
+            },
+            1800: {
+              slidesPerView: 3.2,
+              spaceBetween: 30,
+            },
+          }}
           modules={[Navigation]}
           className="mySwiper2"
         >

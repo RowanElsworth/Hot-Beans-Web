@@ -27,10 +27,24 @@ export default function App() {
           <section className="resource-scroll">
           <Swiper
             navigation={true}
-            slidesPerView={3.2}
+            slidesPerView={1}
             spaceBetween={30}
             centeredSlides={true}
             loop={true}
+            breakpoints={{
+              600: {
+                slidesPerView: 1.2,
+                spaceBetween: 20,
+              },
+              1100: {
+                slidesPerView: 2.2,
+                spaceBetween: 30,
+              },
+              1800: {
+                slidesPerView: 3.2,
+                spaceBetween: 30,
+              },
+            }}
             modules={[Navigation]}
             className="mySwiper3"
           >

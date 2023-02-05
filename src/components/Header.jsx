@@ -52,7 +52,6 @@ export function Header() {
           <ul>
             <li><Link to="/" className={window.location.pathname === "/" ? "active-page" : ""}>Home</Link></li>
             <li><Link to="/About" className={window.location.pathname === "/About" ? "active-page" : ""}>About</Link></li>
-            <li><Link to="/Portfolio" className={window.location.pathname === "/Portfolio" ? "active-page" : ""}>Portfolio</Link></li>
             <li><Link to="/Careers" className={window.location.pathname === "/Careers" ? "active-page" : ""}>Careers</Link></li>
             <li><Link to="/Contact" className={window.location.pathname === "/Contact" ? "active-page" : ""}>Contact</Link></li>
             <li><Link to="/Recources" className={window.location.pathname === "/Recources" ? "active-page" : ""}>Recources</Link></li>
