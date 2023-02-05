@@ -8,6 +8,7 @@ import { Footer } from "../../components/footer"
 
 import "./Careers.scss"
 
+import office from "./office-space.jpg";
 
 export default function App() {
   useEffect(() => {
@@ -84,13 +85,15 @@ export default function App() {
               />
             </div>
             <div className="submit-container">
-              <input type="submit" value="Submit" />
+              <input type="submit" value="Submit" className="submit-form" />
             </div>
           </form>
         </div>
       </div>
-      <div className="contact-img">
-          
+      <div className="contact-img-container">
+        <div className="contact-img">
+          <img src={office} alt="Our office" />
+        </div>
       </div>
     </section>
       <section>

@@ -7,7 +7,9 @@ import { Header } from "../../components/Header"
 import { Footer } from "../../components/footer"
 import "./About.scss"
 
+import Ismael from "./Ismael.png"
 import Sam from "./Sam no BG.png"
+import bg3 from "./teamBackground3.webp"
 
 export default function App() {
   useEffect(() => {
@@ -56,41 +58,29 @@ export default function App() {
       <section className="meet-team">
         <h1>Meet the Team</h1>
         <div className="team-container">
-          <div className="team-box">
-            <div className="team-left">
-              <div className="team-img-container">
-                <img src="" alt="" />
-              </div>
-              <p>Andre</p>
-              <p>Managing Director</p>
+          <div className="person">
+            <div className="person-img-container">
+              <img className="circle" src={bg3} alt=""  />
+              <img className="person-img" src={Ismael} alt="Ismael hard at work." />
             </div>
-            <div className="team-right">
-              <p>With over a decade of experience in the industry, Andre possesses a wealth of knowledge and expertise in web development, project management, and team leadership. He is known by his team and clients for his creative vision, strong communication skills, and unwavering commitment to delivering top-notch results for clients.</p>
-            </div>
+            <p>Ismael</p>
+            <p>Managing Director</p>
           </div>
-          <div className="team-box">
-            <div className="team-left">
-              <div className="team-img-container">
-                <img src="" alt="Sam with a karen hair style" />
-              </div>
-              <p>Karen</p>
-              <p>Graphic Lead</p>
+          <div className="person">
+            <div className="person-img-container">
+              <img className="circle" src={bg3} alt=""  />
+              <img className="person-img" src={Sam} alt="Sam smiling with his thumbs up." />
             </div>
-            <div className="team-right">
-              <p>With a passion for design and a strong eye for detail, Karen has become a leader in the industry, known for creating visually stunning websites. With over five years of experience in graphic design, she brings a wealth of knowledge and expertise to the Hot Beans Web team. Karen's dedication to her craft is evident in the stunning graphics she produces, and her innovative approach to design has earned her a reputation as a true creative genius. Under Karen's guidance, Hot Beans Web continues to push the boundaries of what is possible in website design, delivering stunning and effective websites for clients.</p>
-            </div>
+            <p>Karen</p>
+            <p>Graphic Lead</p>
           </div>
-          <div className="team-box">
-            <div className="team-left">
-              <div className="team-img-container">
-                <img src={Sam} alt="Our most loved tech intern Sam smiling with his thumbs up." />
-              </div>
-              <p>Sam</p>
-              <p>Quality Control Intern</p>
+          <div className="person">
+            <div className="person-img-container">
+              <img className="circle" src={bg3} alt=""  />
+              <img className="person-img" src={Sam} alt="Sam smiling with his thumbs up." />
             </div>
-            <div className="team-right">
-              <p>Sam started with us recently as a graduate from high school in Greece, and while he hasn't got up to speed just yet, we have every confidence in him to achieve the best with us. Doing quality control, Sam is the backbone of the company. He ensures that all our products go out working perfectly for your business and brings much joy to the workforce, never losing his constant smile.</p>
-            </div>
+            <p>Sam</p>
+            <p>Quality Control Intern</p>
           </div>
         </div>
       </section>

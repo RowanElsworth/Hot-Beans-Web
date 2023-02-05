@@ -57,45 +57,67 @@
   }
   .team-container {
     width: 100%;
-    .team-box {
-      padding: 10px 0;
-      width: 100%;
+    padding-bottom: 25px;
+    display: flex;
+    justify-content: center;
+    gap: 150px;
+    .person {
+      $transform-speed: 250ms;
+      position: relative;
+      max-width: 20%;
+      margin-inline: auto;
+
+      .person-img-container {
+        aspect-ratio: 1 / 1.20;
+        display: grid;
+        align-items: end;
+        border-radius: 0 0 100vw 100vw;
+        overflow: hidden;
+        transition: transform $transform-speed ease;
+
+        .circle {
+          position: absolute;
+          inset: auto 0;
+          width: 100%;
+          aspect-ratio: 1 / 1;
+          border-radius: 50%;
+          margin-inline: auto;
+          object-fit: cover;
+        }
+        .person-img {
+          position: relative;
+          left: -4rem;
+          z-index: 2;
+          transform: scale(1.28);
+          transition: transform $transform-speed ease;
+        }
+
+      }
+      .person-img-container:hover {
+        transform: scale(1.1);
+      }
+
+      .person-img-container:hover .person-img {
+        transform:
+          scale(1.28)
+          translateY(-1rem);
+      }
+
+      p:nth-of-type(1) {
+        font-size: min(max(1.8rem, 4vw), 3.5rem);
+      }
+      p:nth-of-type(2) {
+        font-size: min(max(1.8rem, 4vw), 2.4rem);
+      }
+    }
+    .team-right {
+      width: 80%;
+      padding: 0 25px;
+      background-color: $accent-darkpurple;
+      color: white;
+      font-size: min(max(1.8rem, 4vw), 2.8rem);
       display: flex;
-      .team-left {
-        background-color: orange;
-        width: 20%;
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        .team-img-container {
-          outline: 1px solid blue;
-          width: 200px;
-          height: 200px;
-          border-radius: 100%;
-          img {
-            width: 100%;
-            height: 120%;
-            transition: translate 0.5s;
-          }
-          img:hover {
-            translate: 0 -10% 0;
-          }
-        }
-        p:nth-of-type(1) {
-          font-size: min(max(1.8rem, 4vw), 3.5rem);
-        }
-        p:nth-of-type(2) {
-          font-size: min(max(1.8rem, 4vw), 2.4rem);
-        }
-      }
-      .team-right {
-        width: 80%;
-        padding: 0 25px;
-        color: white;
-        font-size: min(max(1.8rem, 4vw), 2.8rem);
-        display: flex;
-        align-items: center;
-      }
+      align-items: center;
     }
   }
 }
