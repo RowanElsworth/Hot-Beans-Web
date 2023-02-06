@@ -2,6 +2,8 @@
 import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 
+import { FaPen, FaSearch, FaMobileAlt, FaCommentAlt } from 'react-icons/fa';
+
 // Swiper
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -24,6 +26,7 @@ import hotBeansGif from './hotBeans.gif';
 import globey from './globey2.png';
 import dino from './testimonial-dino.png'
 import rock from './rock.png';
+import pea from './green pea thing.png'
 
 export function MainPageContent() {
   // For images
@@ -81,6 +84,7 @@ export function MainPageContent() {
         <div className="s3-left-wrapper">
           <div className={index === 0 ? "s3-box s3-box-active" : "s3-box"} onClick={() => handleClick(0)}>
             <div className="s3-box-icon">
+              <FaPen />
             </div>
             <div className="s3-box-text">
               <p>Unique designs</p>
@@ -89,6 +93,7 @@ export function MainPageContent() {
           </div>
           <div className={index === 1 ? "s3-box s3-box-active" : "s3-box"} onClick={() => handleClick(1)}>
             <div className="s3-box-icon">
+              <FaCommentAlt />
             </div>
             <div className="s3-box-text">
               <p>Flexible creation</p>
@@ -97,6 +102,7 @@ export function MainPageContent() {
           </div>
           <div className={index === 2 ? "s3-box s3-box-active" : "s3-box"} onClick={() => handleClick(2)}>
             <div className="s3-box-icon">
+              <FaSearch />
             </div>
             <div className="s3-box-text">
               <p>Brilliant SEO</p>
@@ -105,6 +111,7 @@ export function MainPageContent() {
           </div>
           <div className={index === 3 ? "s3-box s3-box-active" : "s3-box"} onClick={() => handleClick(3)}>
             <div className="s3-box-icon">
+              <FaMobileAlt />
             </div>
             <div className="s3-box-text">
               <p>Reponsive design</p>
@@ -155,11 +162,11 @@ export function MainPageContent() {
           <SwiperSlide>
             <div className="slider-wrapper">
               <div className="s4-box slider-img">
-                <img src={dino} alt="" />
+                <img src={pea} alt="" />
               </div>
               <div className="s4-box slider-txt">
-                <p>Hot Beans Web were great at making my website and making my feelings heard.</p>
-                <p>Some person, lol inc.</p>
+                <p>Even with the tight deadline that they had for my project, Hot Beans Web created a masterpiece and kept me assured throughout the project.</p>
+                <p>Person, Angry Pea Studio</p>
               </div>
             </div>
           </SwiperSlide>
@@ -267,6 +274,7 @@ export function MainPageContent() {
         </Swiper>
 
         {/* section 6 - convinced */}
+        {/* might want to attach the gif and globey into one image/gif instead of fucking around with sizing */}
         <section className="convinced">
           <img src={hotBeansGif} alt="" className='hot-beans-gif'/>
           <p>Convinced?</p>

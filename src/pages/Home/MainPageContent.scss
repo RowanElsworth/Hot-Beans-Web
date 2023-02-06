@@ -147,7 +147,7 @@
       height: 24%;
       background-color: $accent-darkpurple;
       color: $text-light;
-      padding: 20px 60px;
+      padding: 15px 50px;
       border: 2px solid white;
       display: flex;
       align-items: center;
@@ -156,27 +156,34 @@
       cursor: pointer;
       transition: all 0.1s;
       .s3-box-icon {
-        width: 150px;
-        height: 150px;
+        height: 100%;
+        aspect-ratio: 1 / 1;
         border: 1px solid white;
-        border-radius: 100%;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        * {
+          width: 50%;
+          height: 50%;      
+        }
       }
       .s3-box-text {
-        width: calc(100% - 150px);
+        width: 100%;
         height: 100%;
-        padding: 0 7%;
+        padding: 0 2%;
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
         p:nth-of-type(1) {
-          font-size: min(max(1.8rem, 4vw), 3.8rem);
+          font-size: min(max(1.8rem, 4vw), 3.4rem);
           font-weight: $font-bold;
           text-align: center;
           text-shadow: 2px 4px 4px rgba(0,0,0,0.6);
         }
         p:nth-of-type(2) {
-          font-size: min(max(1.8rem, 4vw), 2.6rem);
+          font-size: min(max(1.8rem, 1.3vw), 2.2rem);
           font-weight: $font-semibold;
           text-align: center;
           text-shadow: 2px 4px 4px rgba(0,0,0,0.6);
@@ -232,7 +239,7 @@
     background-color: #5a9586;
   }
   .swiper-slide:nth-of-type(3) {
-    background-color: red;
+    background-color: #8478DD;
   }
   .swiper-slide .slider-wrapper:nth-of-type(1) {
     width: 100%;
@@ -240,8 +247,9 @@
     padding: 0 300px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     flex-direction: row;
+    gap: 10%;
     user-select: none;
     -webkit-user-select: none;
     .s4-box {
@@ -265,11 +273,11 @@
       flex-direction: column;
       gap: 50px;
       p:nth-of-type(1) {
-        font-size: min(max(1.8rem, 4vw), 4rem);
+        font-size: min(max(1.8rem, 2vw), 4rem);
         font-weight: $font-semibold;
       }
       p:nth-of-type(2) {
-        font-size: min(max(1.8rem, 4vw), 2.5rem);
+        font-size: min(max(1.8rem, 1.7vw), 2.5rem);
       }
     }
   }
@@ -397,6 +405,434 @@
       width: 100%;
       height: auto;
       bottom: 0;
+    }
+  }
+}
+
+@media only screen and (max-width: 1400px) {
+  // THIS IS VERY TEMPORARY PLEASE CHANGE LOLOLOLOLOL TODO
+  @media (prefers-reduced-motion: no-preference) {
+    .rocket-ship {
+      animation: ad-bob 3s infinite linear;
+      width: 400px;
+      height: 90vw;
+      transform: rotate(90deg);
+      background-color: white;
+    }
+  }
+  
+  @media (prefers-reduced-motion: reduce) {
+    .rocket-ship {
+      width: 400px;
+      height: 90vw;
+      transform: rotate(90deg);
+      background-color: white;
+    }
+  }
+
+  // s1 check once art is complete
+  // s2 padding
+  .s2 {
+    padding: $header-height 50px; 
+    .s2-h1 {
+      font-size: min(max(1.8rem, 5vw), 100rem);
+    }
+  }
+  // s3 full design change
+  .s3 {
+    width: 100%;
+    height: 100vh;
+    height: 100dvh;
+    display: flex;
+    flex-direction: column-reverse;
+    padding: $header-height 0 0 0;
+    background-image: url("./background.png");
+    background-attachment: fixed;
+  
+    .s3-left-wrapper {
+      width: 100%;
+      height: 30%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-direction: row;
+  
+      .s3-box {
+        width: 25%;
+        height: 100%;
+        background-color: $accent-darkpurple;
+        color: $text-light;
+        padding: 15px 15px;
+        border: 2px solid white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        cursor: pointer;
+        transition: all 0.1s;
+        .s3-box-icon {
+          display: none;
+          height: 100%;
+          aspect-ratio: 1 / 1;
+          border: 1px solid white;
+          border-radius: 50%;
+        }
+        .s3-box-text {
+          width: 100%;
+          height: 100%;
+          padding: 0;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          p:nth-of-type(1) {
+            font-size: min(max(1.8rem, 4vw), 3.4rem);
+            font-weight: $font-bold;
+            text-align: center;
+            text-shadow: 2px 4px 4px rgba(0,0,0,0.6);
+          }
+          p:nth-of-type(2) {
+            font-size: min(max(1.8rem, 1.3vw), 2.2rem);
+            font-weight: $font-semibold;
+            text-align: center;
+            text-shadow: 2px 4px 4px rgba(0,0,0,0.6);
+          }
+        }
+      }
+      .s3-box-active {
+        box-shadow: inset 7px 7px 10px #000;
+      }
+      .s3-box-active::after {
+        content: "";
+        height: 4%;
+        position: absolute;
+        bottom: 0;
+        animation: load-bar 5s linear infinite;
+        background-color: blue;
+      }
+    }
+  
+    .s3-right-wrapper {
+      max-width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      div img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+  // s4 nothing
+  .mySwiper1 {
+    width: 100%;
+    height: 100vh;
+    height: 100dvh;
+    background-color: blue;
+    .swiper-slide:nth-of-type(1) {
+      background-color: blue;
+      color: white;
+    }
+    .swiper-slide:nth-of-type(2) {
+      background-color: #5a9586;
+    }
+    .swiper-slide:nth-of-type(3) {
+      background-color: #8478DD;
+    }
+    .swiper-slide .slider-wrapper:nth-of-type(1) {
+      width: 100%;
+      height: 100vh;
+      padding: 0 100px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: row;
+      gap: 10%;
+      user-select: none;
+      -webkit-user-select: none;
+      .s4-box {
+        width: 600px;
+        height: 600px;
+      }
+      .slider-img {
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        img {
+          max-width: 100%;
+          height: auto;
+          object-fit: contain;
+        }
+      }
+  
+      .slider-txt {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        gap: 50px;
+        p:nth-of-type(1) {
+          font-size: min(max(1.8rem, 2.7vw), 4rem);
+          font-weight: $font-semibold;
+        }
+        p:nth-of-type(2) {
+          font-size: min(max(1.8rem, 2.7vw), 2.5rem);
+        }
+      }
+    }
+  }
+  // s5 ensure clouds work and globey
+}
+
+@media only screen and (max-width: 1000px) {
+  // s1 ship probably needs rotating
+  // s2 flex-direction: row;
+  .s2 {
+    width: 100%;
+    height: 100vh;
+    height: 100dvh;
+    padding: $header-height 0px;
+    background: rgb(2,0,36);
+    background: linear-gradient(130deg, rgba(2,0,36,1) 0%, rgba(56,32,55,1) 50%); 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+  
+    .s2-top-wrapper {
+      flex-direction: column;
+      .s2-box {
+        width: 70%;
+      }
+    }
+    
+    .s2-h1 {
+      font-size: min(max(1.8rem, 4.5vw), 100rem);
+      font-weight: $font-semibold;
+      text-align: center;
+      text-shadow: 2px 4px 2px rgba(255, 255, 255, 0.6);
+    }
+  }
+  // s3 full design change
+  .s2 {
+    padding: $header-height 50px; 
+    .s2-h1 {
+      font-size: min(max(1.8rem, 5vw), 100rem);
+    }
+  }
+  // s3 full design change
+  .s3 {
+    width: 100%;
+    height: 100vh;
+    height: 100dvh;
+    display: flex;
+    flex-direction: column-reverse;
+    padding: $header-height 0 0 0;
+    background-image: url("./background.png");
+    background-attachment: fixed;
+  
+    .s3-left-wrapper {
+      width: 100%;
+      height: 30%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-direction: row;
+      flex-wrap: wrap;
+  
+      .s3-box {
+        width: 50%;
+        height: 50%;
+        background-color: $accent-darkpurple;
+        color: $text-light;
+        padding: 15px 50px;
+        border: 2px solid white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        cursor: pointer;
+        transition: all 0.1s;
+        .s3-box-icon {
+          display: none;
+          height: 100%;
+          aspect-ratio: 1 / 1;
+          border: 1px solid white;
+          border-radius: 50%;
+        }
+        .s3-box-text {
+          width: 100%;
+          height: 100%;
+          padding: 0 2%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          p:nth-of-type(1) {
+            font-size: min(max(1.8rem, 4vw), 3.4rem);
+            font-weight: $font-bold;
+            text-align: center;
+            text-shadow: 2px 4px 4px rgba(0,0,0,0.6);
+          }
+          p:nth-of-type(2) {
+            font-size: min(max(1.8rem, 1.3vw), 2.2rem);
+            font-weight: $font-semibold;
+            text-align: center;
+            text-shadow: 2px 4px 4px rgba(0,0,0,0.6);
+            display: none;
+          }
+        }
+      }
+      .s3-box-active {
+        box-shadow: inset 7px 7px 10px #000;
+      }
+      .s3-box-active::after {
+        content: "";
+        height: 10%;
+        position: absolute;
+        bottom: 0;
+        animation: load-bar 5s linear infinite;
+        background-color: blue;
+      }
+    }
+  
+    .s3-right-wrapper {
+      max-width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      div img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+  // s4 padding
+  .mySwiper1 {
+    width: 100%;
+    height: 100vh;
+    height: 100dvh;
+    background-color: blue;
+    .swiper-slide:nth-of-type(1) {
+      background-color: blue;
+      color: white;
+    }
+    .swiper-slide:nth-of-type(2) {
+      background-color: #5a9586;
+    }
+    .swiper-slide:nth-of-type(3) {
+      background-color: #8478DD;
+    }
+    .swiper-slide .slider-wrapper:nth-of-type(1) {
+      width: 100%;
+      height: 100vh;
+      padding: 70px 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 0;
+      user-select: none;
+      -webkit-user-select: none;
+      .s4-box {
+        width: 80%;
+        height: 80%;
+      }
+      .slider-img {
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        img {
+          max-width: 100%;
+          height: auto;
+          object-fit: contain;
+        }
+      }
+  
+      .slider-txt {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        gap: 0;
+        text-align: center;
+        p:nth-of-type(1) {
+          font-size: min(max(1.8rem, 2.7vw), 4rem);
+          font-weight: $font-semibold;
+        }
+        p:nth-of-type(2) {
+          font-size: min(max(1.8rem, 2.7vw), 2.5rem);
+        }
+      }
+    }
+  }
+  // s5 ensure clouds work and globey
+}
+
+@media only screen and (max-width: 800px) {
+  // s1 ship needs rotating
+  // s2 h1 sizing
+  .s2 {
+    width: 100%;
+    height: 100vh;
+    height: 100dvh;
+    padding: $header-height 0px;
+    background: rgb(2,0,36);
+    background: linear-gradient(130deg, rgba(2,0,36,1) 0%, rgba(56,32,55,1) 50%); 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+  
+    .s2-top-wrapper {
+      flex-direction: column;
+      .s2-box {
+        width: 50%;
+      }
+    }
+    
+    .s2-h1 {
+      font-size: min(max(1.8rem, 6vw), 100rem);
+      font-weight: $font-semibold;
+      text-align: center;
+      text-shadow: 2px 4px 2px rgba(255, 255, 255, 0.6);
+    }
+  }
+  // s3 same as 1000px
+  // s4 flex-direction: row;
+  
+  // s5 ensure clouds work and globey
+}
+
+@media only screen and (max-width: 600px) {
+  // s2
+  .s2 {
+    width: 100%;
+    height: 100vh;
+    height: 100dvh;
+    padding: $header-height 0px;
+    background: rgb(2,0,36);
+    background: linear-gradient(130deg, rgba(2,0,36,1) 0%, rgba(56,32,55,1) 50%); 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+  
+    .s2-top-wrapper {
+      flex-direction: column;
+      .s2-box {
+        width: 90%;
+      }
+    }
+    
+    .s2-h1 {
+      font-size: min(max(1.8rem, 6vw), 100rem);
+      font-weight: $font-semibold;
+      text-align: center;
+      text-shadow: 2px 4px 2px rgba(255, 255, 255, 0.6);
     }
   }
 }

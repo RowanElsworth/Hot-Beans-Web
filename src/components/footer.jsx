@@ -8,7 +8,7 @@ export function Footer() {
       <footer>
         <nav className="nav-links">
           <ul>
-          <li><Link to="/" className={window.location.pathname === "/" ? "active-page" : ""}>Home</Link></li>
+            <li><Link to="/" className={window.location.pathname === "/" ? "active-page" : ""}>Home</Link></li>
             <li><Link to="/About" className={window.location.pathname === "/About" ? "active-page" : ""}>About</Link></li>
             <li><Link to="/Careers" className={window.location.pathname === "/Careers" ? "active-page" : ""}>Careers</Link></li>
             <li><Link to="/Contact" className={window.location.pathname === "/Contact" ? "active-page" : ""}>Contact</Link></li>
