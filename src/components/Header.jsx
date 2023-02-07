@@ -59,10 +59,10 @@ export function Header() {
         </div>
         <div className="socials-nav">
           <ul>
-            <li><a href="/" rel="noreferrer" target="_blank">Twitter</a></li>
-            <li><a href="/" rel="noreferrer" target="_blank">LinkedIn</a></li>
-            <li><a href="/" rel="noreferrer" target="_blank">Facebook</a></li>
-            <li><a href="/" rel="noreferrer" target="_blank">Instagram</a></li>
+            <li><a href="https://www.twitter.com" rel="noreferrer" target="_blank">Twitter</a></li>
+            <li><a href="https://www.linkedin.com" rel="noreferrer" target="_blank">LinkedIn</a></li>
+            <li><a href="https://www.facebook.com" rel="noreferrer" target="_blank">Facebook</a></li>
+            <li><a href="https://www.instagram.com" rel="noreferrer" target="_blank">Instagram</a></li>
           </ul>
         </div>
       </nav>

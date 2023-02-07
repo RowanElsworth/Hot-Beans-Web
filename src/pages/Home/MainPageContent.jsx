@@ -59,6 +59,7 @@ export function MainPageContent() {
       <section className="hero">
         <div className="rocket-ship">
           <img src="" alt="" />
+          <p>PROOF OF CONCEPT NOT FINISHED</p>
         </div>
         
         <div className="launch-station">
