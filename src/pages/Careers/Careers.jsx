@@ -55,7 +55,7 @@ export default function App() {
         <p>For General Career Enquiries</p>
         <div className="contact-wrapper">
           <form
-            action="https://formspree.io/f/mwkjvjay"
+            data-netlify="true"
             method="POST"
             enctype="multipart/form-data"
           >
