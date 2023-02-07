@@ -54,7 +54,7 @@ export function Header() {
             <li><Link to="/About" className={window.location.pathname === "/About" ? "active-page" : ""}>About</Link></li>
             <li><Link to="/Careers" className={window.location.pathname === "/Careers" ? "active-page" : ""}>Careers</Link></li>
             <li><Link to="/Contact" className={window.location.pathname === "/Contact" ? "active-page" : ""}>Contact</Link></li>
-            <li><Link to="/Recources" className={window.location.pathname === "/Recources" ? "active-page" : ""}>Recources</Link></li>
+            <li><Link to="/Resources" className={window.location.pathname === "/Resources" ? "active-page" : ""}>Resources</Link></li>
           </ul>
         </div>
         <div className="socials-nav">

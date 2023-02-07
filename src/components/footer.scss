@@ -17,7 +17,6 @@
 section {
   footer {
     width: 100%;
-    min-height: 120px;
     background-color: $accent-main;
     display: flex;
     flex-direction: column;
@@ -64,13 +63,13 @@ section {
   section {
     footer {
       width: 100%;
-      min-height: 20dvh;
       background-color: $accent-main;
       display: flex;
       flex-direction: column;
       justify-content: flex-end;
       align-items: center;
-      padding-bottom: 10px;
+      padding-bottom: 10vh;
+      padding-bottom: 10dvh;
       nav {
         min-width: 100%;
         ul {

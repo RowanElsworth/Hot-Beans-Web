@@ -23,7 +23,7 @@ export default function App() {
           <Link to="/" className="career-box">
             <div className="top-txt-container">
               <p className="position-title">Lead Front End Developer</p>
-              <p className="position-desc">Do you have the top-notch skills and the ability to required manage a team?</p>
+              <p className="position-desc">Do you have the skills to manage a team?</p>
             </div>
             <p className="position-view">View Position</p>
           </Link>

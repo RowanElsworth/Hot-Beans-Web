@@ -64,7 +64,10 @@ form, input {
 // articles
 .site-1 {
   background-image: url("./freeCodeCamp.png");
-  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #0A0A23;
 }
 .site-2 {
   background-color: white;
@@ -75,21 +78,22 @@ form, input {
 }
 .site-3 {
   background-image: url("./khanAcademy.png");
-  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #102B61;
 }
 .site-4 {
   background-image: url("./codecademy.png");
-  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #F2F2F2;
 }
 .site-5 {
-  background-image: url("./dino.png");
-  background-size: cover;
-}
-.site-6 {
-  background-image: url("./dino.png");
-  background-size: cover;
-}
-.site-7 {
-  background-image: url("./dino.png");
-  background-size: cover;
+  background-image: url("./MDNWeb.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #0F1010;
 }

@@ -29,14 +29,14 @@ import rock from './rock.png';
 import pea from './green pea thing.png'
 
 export function MainPageContent() {
-  // For images
+  // S3 Image changing
   const [index, setIndex] = useState(0);
   const [, setSelected] = useState(null);
   const images = [
-    hotBeansGif,
-    s2example,
-    dino,
-    rock
+    { src: hotBeansGif, text: "Where everything is built from scratch, no templates" },
+    { src: s2example, text: "Around your needs to ensure we deliver the best product that suits you" },
+    { src: dino, text: "Ensures that your site is the one that is viewed, not your competitors" },
+    { src: rock, text: "Making your site look and feel great on all devices so all clients can be reached" }
   ];
 
   // Changes effect every 5 seconds
@@ -120,9 +120,13 @@ export function MainPageContent() {
           </div>
         </div>
         <div className="s3-right-wrapper">
-          <div>
-            <img src={images[index]} alt="Slider" />
+          <div className="s3-right-img">
+            <img src={images[index].src} alt="Slider" />
           </div>
+          <div className="s3-right-text">
+            <p>{images[index].text}</p>
+          </div>
+
         </div>
       </section>
 
@@ -166,7 +170,7 @@ export function MainPageContent() {
               </div>
               <div className="s4-box slider-txt">
                 <p>Even with the tight deadline that they had for my project, Hot Beans Web created a masterpiece and kept me assured throughout the project.</p>
-                <p>Person, Angry Pea Studio</p>
+                <p>Person, Angry Pea Studios</p>
               </div>
             </div>
           </SwiperSlide>

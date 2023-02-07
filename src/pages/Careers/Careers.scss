@@ -24,41 +24,41 @@ section {
 
 .career-select {
   width: 100%;
-  height: 100vh;
+  padding-top: $header-height;
   background-image: url("./background.png");
   background-attachment: fixed;
   display: flex;
   align-items: center;
   justify-content: center;
   .box-container {
-    width: 75%;
-    height: 75%;
-    display: grid;
-    grid-template-rows: 1fr 1fr;
-    grid-template-columns: 1fr 1fr;
-    // grid
-    --margin: 35px;
-    margin: var(--margin);
-    grid-gap: var(--margin);
-    gap: var(--margin);
-  }
-  .career-box {
-    background-color: $accent-light;
-    color: $bg-dark;
-    border-radius: 2rem;
+    width: 80%;
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 40px 30px;
-    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2%;
+    .career-box {
+      width: 48%;
+      background-color: $accent-light;
+      color: $bg-dark;
+      border-radius: 2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 4% 2%;
+      text-decoration: none;
+      margin-bottom: 2%;
+    }
   }
+  
   .position-title {
-      font-size: min(max(1.8rem, 4vw), 3.6rem);
-      font-weight: $font-bold;
+    font-size: min(max(1.8rem, 4vw), 3.6rem);
+    font-weight: $font-bold;
   }
   .position-desc {
-      font-size: min(max(1.8rem, 4vw), 2.6rem);
-      font-weight: $font-semibold;
+    font-size: min(max(1.8rem, 4vw), 2.6rem);
+    font-weight: $font-semibold;
+    min-height: 5ch;
   }
   .position-view {
     font-size: min(max(1.8rem, 4vw), 3.6rem);
@@ -69,9 +69,8 @@ section {
 
 .career-contact {
   width: 100%;
-  min-height: 100vh;
   background-color: #3A2138;
-  padding: 150px;
+  padding: 5%;
   display: flex;
   .career-contact-wrapper {
     width: 50%;
@@ -80,7 +79,8 @@ section {
     justify-content: center;
     flex-direction: column;
     p {
-      font-size: min(max(1.8rem, 4vw), 4.5rem);
+      width: 80%;
+      font-size: min(max(1.8rem, 2.5vw), 4.5rem);
     }
     .contact-wrapper {
       width: 80%;
@@ -104,7 +104,10 @@ section {
     }
     .submit-container {
       margin-top: 10px;
-      width: 50%;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       .submit-form {
         all: unset;
         width: 100%;
@@ -115,6 +118,7 @@ section {
         background-color: var(--feedback-secondary-color);
         color: $accent-darkpurple;
         transition: all 0.3s;
+        text-align: center;
         &:hover {
           border-radius: 0px;
           
@@ -141,10 +145,7 @@ section {
       }
     }
   }
-
 }
-
-
 
 // for button
 @keyframes animatedBackground {
@@ -154,4 +155,310 @@ section {
 	to {
 		background-position: 100% 0;
 	}
+}
+
+@media only screen and (max-width: 1600px) {
+  .career-select {
+    width: 100%;
+    background-image: url("./background.png");
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .box-container {
+      width: 80%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 2%;
+      .career-box {
+        width: 48%;
+        background-color: $accent-light;
+        color: $bg-dark;
+        border-radius: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 4% 2%;
+        text-decoration: none;
+        margin-bottom: 2%;
+      }
+    }
+    
+    .position-title {
+      font-size: min(max(1.8rem, 3vw), 3.2rem);
+      font-weight: $font-bold;
+    }
+    .position-desc {
+      font-size: min(max(1.8rem, 3vw), 2.2rem);
+      font-weight: $font-semibold;
+      min-height: 5ch;
+    }
+    .position-view {
+      font-size: min(max(1.8rem, 3vw), 3.2rem);
+      font-weight: $font-semibold;
+      text-decoration: underline;
+    }
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .career-select {
+    width: 100%;
+    background-image: url("./background.png");
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .box-container {
+      width: 90%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 2%;
+      .career-box {
+        width: 48%;
+        background-color: $accent-light;
+        color: $bg-dark;
+        border-radius: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 4% 2%;
+        text-decoration: none;
+        margin-bottom: 2%;
+      }
+    }
+    
+    .position-title {
+      font-size: min(max(1.8rem, 3vw), 2.8rem);
+      font-weight: $font-bold;
+    }
+    .position-desc {
+      font-size: min(max(1.8rem, 3vw), 2rem);
+      font-weight: $font-semibold;
+      min-height: 5ch;
+    }
+    .position-view {
+      font-size: min(max(1.8rem, 3vw), 2.8rem);
+      font-weight: $font-semibold;
+      text-decoration: underline;
+    }
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .career-select {
+    width: 100%;
+    background-image: url("./background.png");
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .box-container {
+      width: 95%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 2%;
+      .career-box {
+        width: 100%;
+        background-color: $accent-light;
+        color: $bg-dark;
+        border-radius: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 4% 2%;
+        text-decoration: none;
+        margin-bottom: 2%;
+      }
+    }
+    
+    .position-title {
+      font-size: min(max(1.8rem, 3vw), 3.2rem);
+      font-weight: $font-bold;
+    }
+    .position-desc {
+      font-size: min(max(1.8rem, 3vw), 2.2rem);
+      font-weight: $font-semibold;
+      min-height: 5ch;
+    }
+    .position-view {
+      font-size: min(max(1.8rem, 3vw), 3.2rem);
+      font-weight: $font-semibold;
+      text-decoration: underline;
+    }
+  }
+  // section 2
+  .career-contact {
+    width: 100%;
+    background-color: #3A2138;
+    padding: 5%;
+    display: flex;
+    flex-direction: column-reverse;
+    .career-contact-wrapper {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      padding-top: 2%;
+      p {
+        width: 80%;
+        font-size: min(max(1.8rem, 2.5vw), 4.5rem);
+      }
+      .contact-wrapper {
+        width: 80%;
+      }
+      label {
+        font-size: min(max(1.8rem, 4vw), 2rem);
+      }
+      input {
+        width: 100%;
+        border-radius: 1rem;
+        padding: 5px;
+      }
+      .text-container {
+        width: 100%;
+        textarea {
+          display: block;
+          width: 100%;
+          border-radius: 1rem;
+          padding: 5px;
+          resize: vertical;
+        }
+      }
+      .submit-container {
+        margin-top: 10px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .submit-form {
+          all: unset;
+          width: 100%;
+          padding: 10px 30px;
+          font-size: 24px;
+          cursor: pointer;
+          border-radius: 7px;
+          background-color: var(--feedback-secondary-color);
+          color: $accent-darkpurple;
+          transition: all 0.3s;
+          text-align: center;
+          &:hover {
+            border-radius: 0px;
+            
+            color: var(--feedback-primary-color);
+            background-color: var(--background-color);
+            background-image: url("data:image/svg+xml,%3Csvg width='52' height='26' viewBox='0 0 52 26' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffacac' fill-opacity='0.4'%3E%3Cpath d='M10 10c0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6h2c0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4v2c-3.314 0-6-2.686-6-6 0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6zm25.464-1.95l8.486 8.486-1.414 1.414-8.486-8.486 1.414-1.414z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            animation: animatedBackground 5s linear infinite alternate;
+          }
+        }
+      }
+    }
+    .contact-img-container {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .contact-img {
+        width: 100%;
+        height: 100%;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .career-contact {
+    width: 100%;
+    background-color: #3A2138;
+    padding: 5%;
+    display: flex;
+    flex-direction: column-reverse;
+    .career-contact-wrapper {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      padding-top: 2%;
+      p {
+        width: 100%;
+        font-size: min(max(1.8rem, 2.5vw), 4.5rem);
+        text-align: center;
+      }
+      .contact-wrapper {
+        width: 100%;
+      }
+      label {
+        font-size: min(max(1.8rem, 4vw), 2rem);
+      }
+      input {
+        width: 100%;
+        border-radius: 1rem;
+        padding: 5px;
+      }
+      .text-container {
+        width: 100%;
+        textarea {
+          display: block;
+          width: 100%;
+          border-radius: 1rem;
+          padding: 5px;
+          resize: vertical;
+        }
+      }
+      .submit-container {
+        margin-top: 10px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .submit-form {
+          all: unset;
+          width: 100%;
+          padding: 10px 30px;
+          font-size: 24px;
+          cursor: pointer;
+          border-radius: 7px;
+          background-color: var(--feedback-secondary-color);
+          color: $accent-darkpurple;
+          transition: all 0.3s;
+          text-align: center;
+          &:hover {
+            border-radius: 0px;
+            
+            color: var(--feedback-primary-color);
+            background-color: var(--background-color);
+            background-image: url("data:image/svg+xml,%3Csvg width='52' height='26' viewBox='0 0 52 26' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffacac' fill-opacity='0.4'%3E%3Cpath d='M10 10c0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6h2c0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4v2c-3.314 0-6-2.686-6-6 0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6zm25.464-1.95l8.486 8.486-1.414 1.414-8.486-8.486 1.414-1.414z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            animation: animatedBackground 5s linear infinite alternate;
+          }
+        }
+      }
+    }
+    .contact-img-container {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .contact-img {
+        width: 100%;
+        height: 100%;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
 }

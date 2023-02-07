@@ -7,44 +7,47 @@
   background: linear-gradient(130deg, rgba(2,0,36,1) 0%, rgba(56,32,55,1) 50%);
   padding: $header-height 0 0 70px;
   h1 {
-    font-size: min(max(1.8rem, 4vw), 9rem);
+    font-size: min(max(1.8rem, 7vw), 15rem);
   }
   p {
-    font-size: min(max(1.8rem, 4vw), 4rem);
+    font-size: min(max(1.8rem, 14vw), 4rem);
   }
 }
 
 .about-information {
   width: 100%;
-  background-image: url("background.png");
+  height: 75%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  background-image: 
+  linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+  url("./AboutUs.png");
+  background-size: cover;
   background-attachment: fixed;
   .info-container {
-    margin: 0 70px;
+    width: 50%;
+    height: auto;
+    padding: 10px 20px;
     display: flex;
-    gap: 25px;
-    .info-img-container {
-      width: 45%;
-      height: 350px;
-      margin: 10px;
-      background-color: blue;
-    }
-    .info-txt-container {
-      width: 55%;
-      padding: 0 25px;
-      margin: 10px;
-      color: $accent-light;
-      font-weight: $font-bold;
-      font-size: min(max(1.8rem, 4vw), 2.8rem);
-      display: flex;
-      align-items: center;
+    align-items: center;
+    justify-content: center;
+    background-attachment: fixed;
+    p {
+      font-size: min(max(1.8rem, 4vw), 2.4rem);
+      text-align: center;
     }
   }
 }
 
-.about-vid {
+.image-scroll {
   width: 100%;
-  height: 50vh;
-  background-color: orange;
+  height: 40vh;
+  img {
+    width: 100%;
+    height: 100%;
+
+  }
 }
 
 .meet-team {
@@ -60,15 +63,14 @@
     padding-bottom: 25px;
     display: flex;
     justify-content: center;
-    gap: 150px;
     .person {
       $transform-speed: 250ms;
       position: relative;
-      max-width: 20%;
+      max-width: 30%;
       margin-inline: auto;
 
       .person-img-container {
-        aspect-ratio: 1 / 1.20;
+        aspect-ratio: 1 / 1.3;
         display: grid;
         align-items: end;
         border-radius: 0 0 100vw 100vw;
@@ -85,10 +87,12 @@
           object-fit: cover;
         }
         .person-img {
+          width: 100%;
+          height: auto;
           position: relative;
-          left: -4rem;
+          left: 0rem;
           z-index: 2;
-          transform: scale(1.28);
+          transform: scale(1.7);
           transition: transform $transform-speed ease;
         }
 
@@ -99,25 +103,80 @@
 
       .person-img-container:hover .person-img {
         transform:
-          scale(1.28)
-          translateY(-1rem);
+          scale(1.6)
+          translateY(-1.8rem);
       }
 
       p:nth-of-type(1) {
+        margin-top: 20px;
         font-size: min(max(1.8rem, 4vw), 3.5rem);
+        text-align: center;
       }
       p:nth-of-type(2) {
         font-size: min(max(1.8rem, 4vw), 2.4rem);
+        text-align: center;
       }
     }
-    .team-right {
-      width: 80%;
-      padding: 0 25px;
-      background-color: $accent-darkpurple;
-      color: white;
-      font-size: min(max(1.8rem, 4vw), 2.8rem);
+  }
+}
+
+@media only screen and (max-width: 1400px) {
+  // s1 no padding
+  .about-hero {
+    padding: $header-height 0 0 40px;
+    h1 {
+      font-size: min(max(1.8rem, 20vw), 9rem);
+    }
+    p {
+      font-size: min(max(1.8rem, 16vw), 4rem);
+    }
+  }
+  // s2 1 width full. flex row
+  .about-information {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    .info-container {
+      width: 100%;
+      padding: 35px 20px;
       display: flex;
       align-items: center;
+      justify-content: center;
+      background-attachment: fixed;
+      p {
+        font-size: min(max(1.8rem, 4vw), 2.4rem);
+        text-align: center;
+      }
     }
+  }
+  // s3 no padding
+  .meet-team {
+    width: 100%;
+    background-image: url("background.png");
+    background-attachment: fixed;
+    padding: 0 0;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  // s1
+  .about-hero {
+    padding: $header-height 0 0 25px;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  // s1
+  .about-hero {
+    padding: $header-height 0 0 25px;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  // s1
+  .about-hero {
+    padding: $header-height 0 0 5px;
   }
 }

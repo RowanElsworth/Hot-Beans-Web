@@ -15,11 +15,11 @@ import "swiper/css/pagination";
 import { Header } from "../../components/Header"
 import { Footer } from "../../components/footer";
 
-import "./Recources.scss"
+import "./Resources.scss"
 
 export default function App() {
   useEffect(() => {
-    document.title = "Hot Beans Web | Contact"
+    document.title = "Hot Beans Web | Resources"
   }, []);
     return (
         <>
@@ -52,7 +52,7 @@ export default function App() {
               <div className="site-1">
                 <a href="https://www.freecodecamp.org/" rel="noreferrer" target="_blank" className="site-hover">
                   <p>FreeCodeCamp</p>
-                  <p>For everything from basic HTML to  Python machine learning all in interactive lessons.</p>
+                  <p>For everything from basic HTML to Python machine learning all in interactive lessons.</p>
                   <p>View</p>
                 </a>
               </div>
@@ -61,7 +61,7 @@ export default function App() {
               <div className="site-2">
                 <a href="https://www.w3schools.com/" rel="noreferrer" target="_blank" className="site-hover">
                   <p>w3schools</p>
-                  <p>For everything from basic HTML to  Python machine learning all in interactive lessons.</p>
+                  <p>Large variety of comprehensive tutorials for web designs and more.</p>
                   <p>View</p>
                 </a>
               </div>
@@ -70,7 +70,7 @@ export default function App() {
               <div className="site-3">
                 <a href="https://www.khanacademy.org/" rel="noreferrer" target="_blank" className="site-hover">
                   <p>khanacademy</p>
-                  <p>For everything from basic HTML to  Python machine learning all in interactive lessons.</p>
+                  <p>Lessons in computing for all ages, loads of additional resources available.</p>
                   <p>View</p>
                 </a>
               </div>
@@ -79,16 +79,16 @@ export default function App() {
               <div className="site-4">
                 <a href="https://www.codecademy.com/" rel="noreferrer" target="_blank" className="site-hover">
                   <p>codecademy</p>
-                  <p>For everything from basic HTML to  Python machine learning all in interactive lessons.</p>
+                  <p>Interactive coding lessons, great for beginners.</p>
                   <p>View</p>
                 </a>
               </div>
             </SwiperSlide>
             <SwiperSlide>
               <div className="site-5">
-                <a href="https://www.freecodecamp.org/" rel="noreferrer" target="_blank" className="site-hover">
-                  <p>FreeCodeCamp</p>
-                  <p>For everything from basic HTML to  Python machine learning all in interactive lessons.</p>
+                <a href="https://developer.mozilla.org/en-US/" rel="noreferrer" target="_blank" className="site-hover">
+                  <p>MDN Web Docs</p>
+                  <p>Comprehensive references and guides for all website needs.</p>
                   <p>View</p>
                 </a>
               </div>
