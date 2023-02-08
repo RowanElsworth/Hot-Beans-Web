@@ -1,5 +1,4 @@
 
-import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 
 import { FaPen, FaSearch, FaMobileAlt, FaCommentAlt } from 'react-icons/fa';
@@ -27,16 +26,20 @@ import globey from './globey2.png';
 import dino from './testimonial-dino.png'
 import rock from './rock.png';
 import pea from './green pea thing.png'
+import seo from './SEO.png';
+import responsive from './responsive.png'
+import designs from './designs.png'
+import flexible from './flexible.png'
 
 export function MainPageContent() {
   // S3 Image changing
   const [index, setIndex] = useState(0);
   const [, setSelected] = useState(null);
   const images = [
-    { src: hotBeansGif, text: "Where everything is built from scratch, no templates" },
-    { src: s2example, text: "Around your needs to ensure we deliver the best product that suits you" },
-    { src: dino, text: "Ensures that your site is the one that is viewed, not your competitors" },
-    { src: rock, text: "Making your site look and feel great on all devices so all clients can be reached" }
+    { id: "unique", src: designs, text: "Where everything is built from scratch, no templates" },
+    { id: "flexible", src: flexible, text: "Around your needs to ensure we deliver the best product that suits you" },
+    { id: "seo", src: seo, text: "Ensures that your site is the one that is viewed, not your competitors" },
+    { id: "responsive", src: responsive, text: "Making your site look and feel great on all devices so all clients can be reached" }
   ];
 
   // Changes effect every 5 seconds
@@ -281,13 +284,15 @@ export function MainPageContent() {
         {/* section 6 - convinced */}
         {/* might want to attach the gif and globey into one image/gif instead of fucking around with sizing */}
         <section className="convinced">
-          <img src={hotBeansGif} alt="" className='hot-beans-gif'/>
-          <p>Convinced?</p>
-          <ContactBtn></ContactBtn>
-          <Link to="/about" className='about-btn'>More about us</Link>
-          <div className="globey-sit">
+          <div className="globey-wrapper">
             <img src={globey} alt="" className="globey" />
+            <div className="content-wrapper">
+              <img src={hotBeansGif} alt="" className='hot-beans-gif'/>
+              <p className="convinced">Convinced?</p>
+              <ContactBtn className="s6-contact"></ContactBtn>
+            </div>
           </div>
+
         </section>
       </section>
       <Footer />

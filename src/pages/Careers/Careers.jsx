@@ -18,6 +18,7 @@ export default function App() {
   return (
     <>
     <Header></Header>
+    <div className="snap-wrapper">
       <section className="career-select">
         <div className="box-container">
           <Link to="/" className="career-box">
@@ -51,54 +52,53 @@ export default function App() {
         </div>
       </section>
       <section className="career-contact">
-      <div className="career-contact-wrapper">
-        <p>For General Career Enquiries</p>
-        <div className="contact-wrapper">
-          <form
-            action="https://formspree.io/f/mwkjvjay"
-            method="POST"
-            enctype="multipart/form-data"
-          >
-            <div className="name-container">
-              <label htmlFor="">Full Name</label>
-              <input
-                type="text"
-                name="name"
-                id="name"
-              />
-            </div>
-            <div className="email-container">
-              <label htmlFor="">Email</label>
-              <input
-                type="email"
-                name="email"
-                id="email"
-              />
-            </div>
-            <div className="text-container">
-              <label htmlFor="">Your message</label>
-              <textarea
-                name="message"
-                id="message"
-                cols="30"
-                rows="10"
-              />
-            </div>
-            <div className="submit-container">
-              <input type="submit" value="Submit" className="submit-form" />
-            </div>
-          </form>
+        <div className="career-contact-wrapper">
+          <p>For General Career Enquiries</p>
+          <div className="contact-wrapper">
+            <form
+              action="https://formspree.io/f/mwkjvjay"
+              method="POST"
+              enctype="multipart/form-data"
+            >
+              <div className="name-container">
+                <label htmlFor="">Full Name</label>
+                <input
+                  type="text"
+                  name="name"
+                  id="name"
+                />
+              </div>
+              <div className="email-container">
+                <label htmlFor="">Email</label>
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                />
+              </div>
+              <div className="text-container">
+                <label htmlFor="">Your message</label>
+                <textarea
+                  name="message"
+                  id="message"
+                  cols="30"
+                  rows="10"
+                />
+              </div>
+              <div className="submit-container">
+                <input type="submit" value="Submit" className="submit-form" />
+              </div>
+            </form>
+          </div>
         </div>
-      </div>
-      <div className="contact-img-container">
-        <div className="contact-img">
-          <img src={office} alt="Our office" />
+        <div className="contact-img-container">
+          <div className="contact-img">
+            <img src={office} alt="Our office" />
+          </div>
         </div>
-      </div>
-    </section>
-      <section>
-        <Footer />
       </section>
+    <Footer />
+    </div>
     </>
   )
 }
