@@ -23,13 +23,13 @@ import ContactBtn from '../../components/ContactBtn'
 import s2example from './s2-example.png';
 import hotBeansGif from './hotBeans.gif';
 import globey from './globey2.png';
-import dino from './testimonial-dino.png'
+import dino from './testimonial-dino.png';
 import rock from './rock.png';
-import pea from './green pea thing.png'
+import pea from './green pea thing.png';
 import seo from './SEO.png';
-import responsive from './responsive.png'
-import designs from './designs.png'
-import flexible from './flexible.png'
+import responsive from './responsive.png';
+import designs from './designs.png';
+import flexible from './flexible.png';
 
 export function MainPageContent() {
   // S3 Image changing
@@ -42,7 +42,7 @@ export function MainPageContent() {
     { id: "responsive", src: responsive, text: "Making your site look and feel great on all devices so all clients can be reached" }
   ];
 
-  // Changes effect every 5 seconds
+  // S3 - Changes effect every 5 seconds
   useEffect(() => {
     const intervalId = setInterval(() => {
       setIndex((index + 1) % images.length);
@@ -61,13 +61,10 @@ export function MainPageContent() {
       {/* Hero */}
       <section className="hero">
         <div className="rocket-ship">
-          <img src="" alt="" />
-          <p>PROOF OF CONCEPT NOT FINISHED</p>
         </div>
-        
-        <div className="launch-station">
-
-        </div>
+        {/* <div className="arrow-down">
+          <div>↓</div>
+        </div> */}
       </section>
 
       {/* section 2 */}

@@ -18,3 +18,19 @@ $font-regular: 400;
 $font-semibold: 600;
 $font-bold: 700;
 $font-extrabold: 800;
+
+// css
+:root {
+  --text-color-lol: #fff
+}
+
+.my-button {
+  background: var(--text-color-lol);
+}
+
+// scss
+$text-color-lol2: #000;
+
+.my-button2 {
+  background: $text-color-lol2;
+}

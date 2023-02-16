@@ -35,28 +35,29 @@
 
 @media (prefers-reduced-motion: no-preference) {
   .rocket-ship {
-    animation: ad-bob 3s infinite linear;
-    width: 400px;
-    height: 1000px;
-    transform: rotate(90deg);
-    background-color: white;
-    color: black;
-    font-size: 3rem;
+    // animation: hero-bob 3s infinite linear;
+    animation: rocket-change 250ms infinite;
+    width: 75%;
+    height: 75%;
+    transform: scaleX(-1);
+    background-size: cover;
+    background-repeat: no-repeat;
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
   .rocket-ship {
-    width: 400px;
-    height: 1000px;
-    transform: rotate(90deg);
-    background-color: white;
-    color: black;
-    font-size: 3rem;
+    width: 75%;
+    height: 75%;
+    background-image: url("./rocket3.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    transform: scaleX(-1);
   }
 }
 
-@keyframes ad-bob {
+// makes rocketship bob - redundent?
+@keyframes hero-bob {
   0% {
     translate: 0;
   }
@@ -71,6 +72,27 @@
   }
   100% {
     translate: 0;
+  }
+}
+
+// changes rocket
+@keyframes rocket-change {
+  0% {
+    background-image: url("./rocket2.png");
+    rotate: 0deg;
+  }
+  25% {
+    rotate: 0.8deg;
+  }
+  50% {
+    rotate: 0deg;
+  }
+  75% {
+    rotate: -0.8deg;
+  }
+  100% {
+    background-image: url("./rocket3.png");
+    rotate: 0deg;
   }
 }
 
@@ -192,7 +214,7 @@
       position: absolute;
       bottom: 0;
       animation: load-bar 5s linear infinite;
-      background-color: blue;
+      background-color: white;
     }
   }
 
@@ -526,7 +548,7 @@
         position: absolute;
         bottom: 0;
         animation: load-bar 5s linear infinite;
-        background-color: blue;
+        background-color: white;
       }
     }
   
@@ -724,7 +746,7 @@
         position: absolute;
         bottom: 0;
         animation: load-bar 5s linear infinite;
-        background-color: blue;
+        background-color: white;
       }
     }
   
