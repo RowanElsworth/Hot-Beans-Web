@@ -33,10 +33,8 @@ import flexible from './flexible.png';
 
 export function MainPageContent() {
 
-  // Scroll feature
+  // Scroll to next section
   
-
-
   // Scroll more button on s1
   const targetRef = useRef(null);
 
@@ -72,7 +70,7 @@ export function MainPageContent() {
   };
 
   return (
-    <div className="snap-wrapper">
+    <>
       {/* Hero */}
       <section className="hero">
         <div className="rocket-ship">
@@ -83,13 +81,13 @@ export function MainPageContent() {
       </section>
 
       {/* section 2 */}
-      <section className="s2" ref={targetRef}>
+      <section className="s2">
         <div className="s2-top-wrapper">
           <div className="s2-box">
             <img src={s2example} alt="Phone, tablet, and monitor example designs of our websites" className="s2-example-img" />
           </div>
           <div className="s2-box">
-           <h1 className="s2-h1">Bespoke website design tailored for <span className="s2-span"s><u>YOU</u></span></h1>
+            <h1 className="s2-h1">Bespoke website design tailored for <span className="s2-span"><u>YOU</u></span></h1>
           </div>
         </div>
         <ContactBtn></ContactBtn>
@@ -308,6 +306,6 @@ export function MainPageContent() {
         </section>
       </section>
       <Footer />
-    </div>
+    </>
   );
 }
