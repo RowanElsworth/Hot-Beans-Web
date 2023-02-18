@@ -1,6 +1,7 @@
 
+// hooks
 import { useState, useEffect, useRef } from 'react';
-
+// font awesome icons
 import { FaPen, FaSearch, FaMobileAlt, FaCommentAlt } from 'react-icons/fa';
 
 // Swiper
