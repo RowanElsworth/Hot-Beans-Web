@@ -1,9 +1,6 @@
 
 @import "./src/variables.scss";
 
-// globals 
-
-
 #root {
   width: 100%;
   height: 100vh;
@@ -31,54 +28,88 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+  position: relative;
+}
+
+.rocket-ship {
+  width: 55%;
+  height: 55%;
+  transform: scaleX(-1);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.arrow-down {
+  all: unset;
+
+  position: absolute;
+  bottom: 7%;
+
+  padding: 1.5rem 2.5rem;
+  border-radius: 2rem;
+  border: 3px solid white;
+  font-size: 4.5rem;
+  font-weight: $font-semibold;
+  letter-spacing: 0.4rem;
+  cursor: pointer;
 }
 
 @media (prefers-reduced-motion: no-preference) {
   .rocket-ship {
-    // animation: hero-bob 3s infinite linear;
-    animation: rocket-change 250ms infinite;
-    width: 75%;
-    height: 75%;
-    transform: scaleX(-1);
-    background-size: cover;
-    background-repeat: no-repeat;
+    animation:
+      rocket-change 400ms infinite, // I like 400ms
+      rocket-bob 4s infinite linear, // I like 4s
+      rocket-rotate 300ms infinite linear; // I like 300ms
+  }
+
+  .arrow-down {
+    animation: arrow-bob 4s infinite linear;
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
   .rocket-ship {
-    width: 75%;
-    height: 75%;
     background-image: url("./rocket3.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    transform: scaleX(-1);
   }
 }
 
-// makes rocketship bob - redundent?
-@keyframes hero-bob {
+// makes rocketship bob
+@keyframes rocket-bob {
   0% {
     translate: 0;
   }
   25% {
-    translate: 0 2%;
+    translate: 0 6%;
   }
   50% {
     translate: 0;
   }
   75% {
-    translate: 0 -2%;
+    translate: 0 -6%;
   }
   100% {
     translate: 0;
   }
 }
 
-// changes rocket
+// changes rocket image
 @keyframes rocket-change {
   0% {
     background-image: url("./rocket2.png");
+  }
+  99% {
+    background-image: url("./rocket3.png");
+  }
+  100% {
+    background-image: url("./rocket3.png");
+  }
+}
+
+// rotates rocket
+@keyframes rocket-rotate {
+  0% {
     rotate: 0deg;
   }
   25% {
@@ -91,8 +122,25 @@
     rotate: -0.4deg;
   }
   100% {
-    background-image: url("./rocket3.png");
     rotate: 0deg;
+  }
+}
+
+@keyframes arrow-bob {
+  0% {
+    translate: 0;
+  }
+  25% {
+    translate: 0 12%;
+  }
+  50% {
+    translate: 0;
+  }
+  75% {
+    translate: 0 -12%;
+  }
+  100% {
+    translate: 0;
   }
 }
 

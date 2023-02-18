@@ -1,5 +1,5 @@
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 
 import { FaPen, FaSearch, FaMobileAlt, FaCommentAlt } from 'react-icons/fa';
 
@@ -32,6 +32,21 @@ import designs from './designs.png';
 import flexible from './flexible.png';
 
 export function MainPageContent() {
+
+  // Scroll feature
+  
+
+
+  // Scroll more button on s1
+  const targetRef = useRef(null);
+
+  const handleScrollClick = () => {
+    targetRef.current.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    });
+  }; 
+  
   // S3 Image changing
   const [index, setIndex] = useState(0);
   const [, setSelected] = useState(null);
@@ -51,7 +66,7 @@ export function MainPageContent() {
   }, [index, images.length]);
 
   // Click handler
-  const handleClick = index => {
+  const handleS3Click = index => {
     setIndex(index);
     setSelected(index);
   };
@@ -62,13 +77,13 @@ export function MainPageContent() {
       <section className="hero">
         <div className="rocket-ship">
         </div>
-        {/* <div className="arrow-down">
-          <div>↓</div>
-        </div> */}
+        <button className="arrow-down" onClick={handleScrollClick}>
+          Explore ↓
+        </button>
       </section>
 
       {/* section 2 */}
-      <section className="s2">
+      <section className="s2" ref={targetRef}>
         <div className="s2-top-wrapper">
           <div className="s2-box">
             <img src={s2example} alt="Phone, tablet, and monitor example designs of our websites" className="s2-example-img" />
@@ -83,7 +98,7 @@ export function MainPageContent() {
       {/* section 3 */}
       <section className="s3">
         <div className="s3-left-wrapper">
-          <div className={index === 0 ? "s3-box s3-box-active" : "s3-box"} onClick={() => handleClick(0)}>
+          <div className={index === 0 ? "s3-box s3-box-active" : "s3-box"} onClick={() => handleS3Click(0)}>
             <div className="s3-box-icon">
               <FaPen />
             </div>
@@ -92,7 +107,7 @@ export function MainPageContent() {
               <p>Where everything is built from scratch, no templates</p>
             </div>
           </div>
-          <div className={index === 1 ? "s3-box s3-box-active" : "s3-box"} onClick={() => handleClick(1)}>
+          <div className={index === 1 ? "s3-box s3-box-active" : "s3-box"} onClick={() => handleS3Click(1)}>
             <div className="s3-box-icon">
               <FaCommentAlt />
             </div>
@@ -101,7 +116,7 @@ export function MainPageContent() {
               <p>Around your needs to ensure we deliver the best product that suits you</p>
             </div>
           </div>
-          <div className={index === 2 ? "s3-box s3-box-active" : "s3-box"} onClick={() => handleClick(2)}>
+          <div className={index === 2 ? "s3-box s3-box-active" : "s3-box"} onClick={() => handleS3Click(2)}>
             <div className="s3-box-icon">
               <FaSearch />
             </div>
@@ -110,7 +125,7 @@ export function MainPageContent() {
               <p>Ensures that your site is the one that is viewed, not your competitors</p>
             </div>
           </div>
-          <div className={index === 3 ? "s3-box s3-box-active" : "s3-box"} onClick={() => handleClick(3)}>
+          <div className={index === 3 ? "s3-box s3-box-active" : "s3-box"} onClick={() => handleS3Click(3)}>
             <div className="s3-box-icon">
               <FaMobileAlt />
             </div>
@@ -171,7 +186,7 @@ export function MainPageContent() {
               </div>
               <div className="s4-box slider-txt">
                 <p>Even with the tight deadline that they had for my project, Hot Beans Web created a masterpiece and kept me assured throughout the project.</p>
-                <p>Person, Angry Pea Studios</p>
+                <p>Heidi, Angry Pea Studios</p>
               </div>
             </div>
           </SwiperSlide>

@@ -121,7 +121,7 @@ section {
         transition: all 0.3s;
         text-align: center;
         &:hover {
-          border-radius: 0px;
+          border-radius: 7px;
           
           color: var(--feedback-primary-color);
           background-color: var(--background-color);
