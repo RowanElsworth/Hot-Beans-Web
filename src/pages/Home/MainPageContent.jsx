@@ -71,18 +71,19 @@ export function MainPageContent() {
   };
 
   return (
-    <>
+    <div className="snap-wrapper">
       {/* Hero */}
       <section className="hero">
         <div className="rocket-ship">
         </div>
         <button className="arrow-down" onClick={handleScrollClick}>
+          <div></div>
           Explore ↓
         </button>
       </section>
 
       {/* section 2 */}
-      <section className="s2">
+      <section className="s2" ref={targetRef}>
         <div className="s2-top-wrapper">
           <div className="s2-box">
             <img src={s2example} alt="Phone, tablet, and monitor example designs of our websites" className="s2-example-img" />
@@ -215,7 +216,7 @@ export function MainPageContent() {
         <Swiper
           navigation={true}
           slidesPerView={1.05}
-          spaceBetween={30}
+          spaceBetween={40}
           centeredSlides={true}
           breakpoints={{
             600: {
@@ -235,60 +236,60 @@ export function MainPageContent() {
           className="mySwiper2"
         >
           <SwiperSlide>
-            <div className="article-1">
-              <a href="https://www.hswsolutions.com/resources/why-a-mobile-friendly-website-is-important/" rel="noreferrer" target="_blank" className="link-container">
+            <a className="article-1" href="https://www.hswsolutions.com/resources/why-a-mobile-friendly-website-is-important/" rel="noreferrer" target="_blank">
+              <div className="bottom-container">
                 <p>Why your website must be mobile-friendly</p>
                 <p className="view-more">View</p>
-              </a>
-            </div>
+              </div>
+            </a>
           </SwiperSlide>
           <SwiperSlide>
-            <div className="article-2">
-              <a href="https://www.redlineminds.com/search-engine-optimizaton/what-is-seo-how-to-do-seo-for-ecommerce/" rel="noreferrer" target="_blank" className="link-container">
+            <a className="article-2" href="https://www.redlineminds.com/search-engine-optimizaton/what-is-seo-how-to-do-seo-for-ecommerce/" rel="noreferrer" target="_blank">
+              <div className="bottom-container">
                 <p>What is SEO?</p>
                 <p className="view-more">View</p>
-              </a>
-            </div>
+              </div>
+            </a>
           </SwiperSlide>
           <SwiperSlide>
-            <div className="article-3">
-              <a href="https://www.digitaldoughnut.com/articles/2020/december-2020/why-unique-content-is-more-important-for-your-site" rel="noreferrer" target="_blank" className="link-container">
+            <a className="article-3" href="https://www.digitaldoughnut.com/articles/2020/december-2020/why-unique-content-is-more-important-for-your-site" rel="noreferrer" target="_blank">
+              <div className="bottom-container">
                 <p>Does your website need to be unique?</p>
                 <p className="view-more">View</p>
-              </a>
-            </div>
+              </div>
+            </a>
           </SwiperSlide>
           <SwiperSlide>
-            <div className="article-4">
-              <a href="https://www.glasgowcreative.co.uk/why-colour-scheme-is-important-branding-business/" rel="noreferrer" target="_blank" className="link-container">
+            <a className="article-4" href="https://www.glasgowcreative.co.uk/why-colour-scheme-is-important-branding-business/" rel="noreferrer" target="_blank">
+              <div className="bottom-container">
                 <p>Benefits of a consistent colour scheme</p>
                 <p className="view-more">View</p>
-              </a>
-            </div>
+              </div>
+            </a>
           </SwiperSlide>
           <SwiperSlide>
-            <div className="article-5">
-              <a href="https://www.dreamhost.com/blog/website-benefits-for-small-business/" rel="noreferrer" target="_blank" className="link-container">
+            <a className="article-5" href="https://www.dreamhost.com/blog/website-benefits-for-small-business/" rel="noreferrer" target="_blank">
+              <div className="bottom-container">
                 <p>Why websites are good for small businesses</p>
                 <p className="view-more">View</p>
-              </a>
-            </div>
+              </div>
+            </a>
           </SwiperSlide>
           <SwiperSlide>
-            <div className="article-6">
-              <a href="https://www.microdinc.com/blog/improve-customer-satisfaction/" rel="noreferrer" target="_blank" className="link-container">
+            <a className="article-6" href="https://www.microdinc.com/blog/improve-customer-satisfaction/" rel="noreferrer" target="_blank">
+              <div className="bottom-container">
                 <p>How websites boost customer satisfaction</p>
                 <p className="view-more">View</p>
-              </a>
-            </div>
+              </div>
+            </a>
           </SwiperSlide>
           <SwiperSlide>
-            <div className="article-7">
-              <a href="https://ballywiremedia.ie/2021/10/05/1580-2/" rel="noreferrer" target="_blank" className="link-container">
+            <a className="article-7" href="https://ballywiremedia.ie/2021/10/05/1580-2/" rel="noreferrer" target="_blank">
+              <div className="bottom-container">
                 <p>Benefits of websites over traditional media</p>
                 <p className="view-more">View</p>
-              </a>
-            </div>
+              </div>
+            </a>
           </SwiperSlide>
         </Swiper>
 
@@ -296,17 +297,18 @@ export function MainPageContent() {
         {/* might want to attach the gif and globey into one image/gif instead of fucking around with sizing */}
         <section className="convinced">
           <div className="globey-wrapper">
-            <img src={globey} alt="" className="globey" />
-            <div className="content-wrapper">
-              <img src={hotBeansGif} alt="" className='hot-beans-gif'/>
-              <p className="convinced">Convinced?</p>
-              <ContactBtn className="s6-contact"></ContactBtn>
+            <div className="globey">
+              <div className="content-wrapper">
+                {/* <img src={hotBeansGif} alt="" className='hot-beans-gif'/> */}
+                <p className="convinced-text">Convinced?</p>
+                <ContactBtn className="s6-contact"></ContactBtn>
+              </div>
             </div>
           </div>
 
         </section>
       </section>
       <Footer />
-    </>
+    </div>
   );
 }

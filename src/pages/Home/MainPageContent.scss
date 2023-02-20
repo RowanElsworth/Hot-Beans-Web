@@ -6,17 +6,6 @@
   height: 100vh;
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .snap-wrapper {
-    width: 100%;
-    height: 100vh;
-  }
-  section {
-    scroll-snap-align: unset !important;
-  }
-}
-
-
 // Hero/Section 1
 
 .hero {
@@ -44,16 +33,56 @@
 .arrow-down {
   all: unset;
 
-  position: absolute;
-  bottom: 7%;
-
-  padding: 1.5rem 2.5rem;
-  border-radius: 2rem;
-  border: 3px solid white;
-  font-size: 4.5rem;
-  font-weight: $font-semibold;
-  letter-spacing: 0.4rem;
+  font-size: min(max(1.8rem, 4vw), 6rem);
   cursor: pointer;
+
+  position: absolute;
+  bottom: 5%;
+  overflow:hidden;
+  color: #fff;
+  z-index: 0;
+  padding: 1rem 2rem;
+}
+
+.arrow-down div {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  border-radius: 3rem;
+  padding: 6px; /* the thickness of the border */
+  /* the below will do the magic */
+  -webkit-mask: 
+     linear-gradient(#fff 0 0) content-box, /* this will cover only the content area (no padding) */ 
+     linear-gradient(#fff 0 0); /* this will cover all the area */
+  -webkit-mask-composite: xor; /* needed for old browsers until the below is more supported */
+  mask-composite: exclude; /* this will exclude the first layer from the second so only the padding area will be kept visible */
+}
+
+.arrow-down div::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 400px;
+  height: 400px;
+  background: linear-gradient(
+    $accent-main 25%,
+    #fff 75%,
+  );
+}
+
+.arrow-down div::before {
+  animation: arrow-button 2s infinite linear;
+}
+
+@keyframes arrow-button {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg)
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg)
+  }
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -61,11 +90,7 @@
     animation:
       rocket-change 400ms infinite, // I like 400ms
       rocket-bob 4s infinite linear, // I like 4s
-      rocket-rotate 300ms infinite linear; // I like 300ms
-  }
-
-  .arrow-down {
-    animation: arrow-bob 4s infinite linear;
+      rocket-rotate 500ms infinite linear; // I like 300ms
   }
 }
 
@@ -126,22 +151,10 @@
   }
 }
 
-@keyframes arrow-bob {
-  0% {
-    translate: 0;
-  }
-  25% {
-    translate: 0 12%;
-  }
-  50% {
-    translate: 0;
-  }
-  75% {
-    translate: 0 -12%;
-  }
-  100% {
-    translate: 0;
-  }
+@keyframes arrow-rotate {
+	100% {
+		transform: rotate(1turn);
+	}
 }
 
 // Section 2
@@ -373,18 +386,21 @@
 // Section 5 articles
 .mySwiper2 {
   width: 100%;
-  height: 300px;
+  height: 40%;
   .swiper-slide {
-    div {
+    a {
+      position: relative;
       width: 100%;
-      height: 100%;
+      height: 75%;
       display: flex;
       flex-direction: column;
       justify-content: flex-end;
-      border-radius: 2rem;
-      .link-container {
+      border-radius: 2rem 2rem 0 0;
+      .bottom-container {
+        position: absolute;
+        bottom: -30%;
         width: 100%;
-        height: 25%;
+        height: 30%;
         padding: 10px;
         background-color: black;
         opacity: 0.7;
@@ -393,6 +409,7 @@
         flex-direction: column;
         justify-content: center;
         border-radius: 0 0 2rem 2rem;
+        padding: 0 3%;
         p {
           color: white;
           font-size: min(max(1.8rem, 4vw), 2.4rem);
@@ -408,10 +425,8 @@
           text-decoration: underline;
         }
       }
-      .link-container:hover {
-        height: 30%;
+      .bottom-container:hover {
         opacity: 0.9;
-        justify-content: center;
       }
     }
   }
@@ -421,30 +436,37 @@
 .article-1 {
   background-image: url("./articles/article1.jpg");
   background-size: cover;
+  background-position: center;
 }
 .article-2 {
   background-image: url("./articles/article2.jpg");
   background-size: cover;
+  background-position: center;
 }
 .article-3 {
   background-image: url("./articles/article3.jpg");
   background-size: cover;
+  background-position: center;
 }
 .article-4 {
   background-image: url("./articles/article4.jpg");
   background-size: cover;
+  background-position: center;
 }
 .article-5 {
   background-image: url("./articles/article5.jpg");
   background-size: cover;
+  background-position: center;
 }
 .article-6 {
   background-image: url("./articles/article6.jpg");
   background-size: cover;
+  background-position: center;
 }
 .article-7 {
   background-image: url("./articles/article7.jpg");
   background-size: cover;
+  background-position: center;
 }
 
 // Section 6 - Convinced?
@@ -453,71 +475,47 @@
   height: 40%;
   position: absolute;
   bottom: 0;
-  left: 0;
+
   .globey-wrapper {
-    position: relative;
+    position: absolute;
     width: 100%;
     height: 100%;
-    background-color: orange;
-    z-index: 1;
+    bottom: 0;
+
     .globey {
       width: 100%;
       height: 100%;
-    }
-    
-    .content-wrapper {
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      top: 0;
-      left: 0;
-      .hot-beans-gif {
-        position: absolute;
-        top: 0;
-        max-width: 200px;
-        height: auto;
-        z-index: 2;
-      }
-      .convinced {
-        position: absolute;
-        font-size: min(max(1.8rem, 5vw), 9rem);
-        letter-spacing: 10px;
-        font-weight: $font-semibold;
-        z-index: 1;
-        text-shadow: 4px 6px 3px rgba(0, 0, 0, 0.6);
-      }
-      .s6-contact {
-        position: absolute;
+      background-image: url("./globey2.png");
+      background-size: 100%;
+      background-position: bottom;
+      background-repeat: no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .content-wrapper {
+        width: 50%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        .hot-beans-gif {
+          top: 0;
+          max-width: 200px;
+          height: auto;
+        }
+        .convinced-text {
+          font-size: min(max(1.8rem, 5vw), 9rem);
+          letter-spacing: 10px;
+          font-weight: $font-semibold;
+          text-shadow: 4px 6px 3px rgba(0, 0, 0, 0.6);
+        }
+        .s6-contact {
+        }
       }
     }
   }
-
-
-
-
 }
 
 @media only screen and (max-width: 1400px) {
-  // THIS IS VERY TEMPORARY PLEASE CHANGE LOLOLOLOLOL TODO
-  @media (prefers-reduced-motion: no-preference) {
-    .rocket-ship {
-      animation: ad-bob 3s infinite linear;
-      width: 400px;
-      height: 90vw;
-      transform: rotate(90deg);
-      background-color: white;
-    }
-  }
-  
-  @media (prefers-reduced-motion: reduce) {
-    .rocket-ship {
-      width: 400px;
-      height: 90vw;
-      transform: rotate(90deg);
-      background-color: white;
-    }
-  }
-
   // s1 check once art is complete
   // s2 padding
   .s2 {
@@ -687,6 +685,11 @@
 
 @media only screen and (max-width: 1000px) {
   // s1 ship probably needs rotating
+  .hero {
+    .arrow-down {
+      font-size: min(max(2.2rem, 8vw), 4rem);
+    }
+  }
   // s2 flex-direction: row;
   .s2 {
     width: 100%;
@@ -832,16 +835,6 @@
     height: 100vh;
     height: 100dvh;
     background-color: blue;
-    .swiper-slide:nth-of-type(1) {
-      background-color: blue;
-      color: white;
-    }
-    .swiper-slide:nth-of-type(2) {
-      background-color: #5a9586;
-    }
-    .swiper-slide:nth-of-type(3) {
-      background-color: #8478DD;
-    }
     .swiper-slide .slider-wrapper:nth-of-type(1) {
       width: 100%;
       height: 100vh;
@@ -888,7 +881,17 @@
 }
 
 @media only screen and (max-width: 800px) {
-  // s1 ship needs rotating
+  // s1
+  .hero {
+    .rocket-ship {
+      width: 60vh;
+      height: 95vw;
+      transform:
+        scaleX(-1)
+        rotate(-90deg);
+    }
+  }
+  // rotates rocket
   // s2 h1 sizing
   .s2 {
     width: 100%;
@@ -924,6 +927,16 @@
 }
 
 @media only screen and (max-width: 600px) {
+  // s1
+  .hero {
+    .rocket-ship {
+      width: 60vh;
+      height: 95vw;
+      transform:
+        scaleX(-1)
+        rotate(-90deg);
+    }
+  }
   // s2
   .s2 {
     width: 100%;

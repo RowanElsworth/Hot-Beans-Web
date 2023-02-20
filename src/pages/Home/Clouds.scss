@@ -4,8 +4,8 @@ $cloudWidth: 320px;
 .clouds {
   // this might need to change to a linear gradient for file size sake,
   // don't want it too big for obvious reasons
-  background-image: url("./Sky.png");
-  background-size: cover;
+  background: rgb(205,205,205);
+  background: linear-gradient(0deg, rgba(205,205,205,1) 0%, rgba(126,171,208,1) 50%, rgba(67,118,176,1) 100%);
   position: relative;
   padding-top: 70px;
   overflow: hidden;
