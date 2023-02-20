@@ -22,8 +22,8 @@ import './Clouds.scss'
 import ContactBtn from '../../components/ContactBtn'
 
 import s2example from './s2-example.png';
-import hotBeansGif from './hotBeans.gif';
-import globey from './globey2.png';
+// import hotBeansGif from './hotBeans.gif';
+// import globey from './globey2.png';
 import dino from './testimonial-dino.png';
 import rock from './rock.png';
 import pea from './green pea thing.png';
