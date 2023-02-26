@@ -1,7 +1,4 @@
 
-import React, { useContext } from "react";
-import { TargetContext } from "../../TargetContext";
-
 import "./Hero.scss"
 
 export function Hero({ targetRef }) {
