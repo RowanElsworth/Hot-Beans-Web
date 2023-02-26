@@ -58,15 +58,15 @@ body {
 
 // to remove the scroll effect on mobile
 
-// @media only screen and (max-width: 800px) {
-//   .snap-wrapper {
-//     width: 100%;
-//     height: 100vh;
-//   }
-//   section {
-//     scroll-snap-align: unset !important;
-//   }
-//   .footer-wrapper {
-//     scroll-snap-align: unset !important;
-//   }
-// }
+@media only screen and (max-width: 800px) {
+  .snap-wrapper {
+    width: 100%;
+    height: 100vh;
+  }
+  section {
+    scroll-snap-align: unset !important;
+  }
+  .footer-wrapper {
+    scroll-snap-align: unset !important;
+  }
+}

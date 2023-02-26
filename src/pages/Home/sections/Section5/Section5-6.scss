@@ -1,0 +1,153 @@
+
+@import "./src/variables.scss";
+
+// Section 5
+.mySwiper2 {
+  width: 100%;
+  height: 40%;
+  // swiper buttons
+  .swiper-button-next,
+  .swiper-button-prev {
+    color: white;
+  }
+  .swiper-slide {
+    a {
+      position: relative;
+      width: 100%;
+      height: 75%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+  
+      .bottom-container {
+        position: absolute;
+        bottom: -30%;
+        width: 100%;
+        height: 30%;
+        padding: 10px;
+        background-color: black;
+        opacity: 0.7;
+        transition: 0.6s;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0 3%;
+  
+        p {
+          color: white;
+          font-size: min(max(1.8rem, 4vw), 2.4rem);
+          user-select: none;
+          -webkit-user-select: none;
+        }
+  
+        a {
+          text-decoration: underline;
+          font-size: min(max(1.8rem, 4vw), 2.2rem);
+          color: white;
+  
+          &:hover + .bottom-container {
+            opacity: 0.9;
+          }
+        }
+  
+        .view-more {
+          text-decoration: underline;
+        }
+      }
+  
+      &:hover .bottom-container {
+        opacity: 0.9;
+      }
+    }
+  }
+}
+
+// articles
+.article-1 {
+  background-image: url("../../assets/articles/article1.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.article-2 {
+  background-image: url("../../assets/articles/article2.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.article-3 {
+  background-image: url("../../assets/articles/article3.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.article-4 {
+  background-image: url("../../assets/articles/article4.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.article-5 {
+  background-image: url("../../assets/articles/article5.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.article-6 {
+  background-image: url("../../assets/articles/article6.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.article-7 {
+  background-image: url("../../assets/articles/article7.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+// Section 6
+.convinced {
+  width: 100%;
+  height: 32%;
+  position: absolute;
+  bottom: 0;
+
+  .globey img {
+    height: 32vh;
+    width: 100%;
+  }
+  .content-wrapper {
+    position: absolute;
+    top: calc(50% - 9vh);
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    max-width: 800px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    .hot-beans-gif {
+      max-width: 200px;
+      height: auto;
+    }
+    
+    .convinced-text {
+      font-size: min(max(1.8rem, 5vw), 9rem);
+      letter-spacing: 10px;
+      font-weight: $font-semibold;
+      text-shadow: 4px 6px 3px rgba(0, 0, 0, 0.6);
+    }
+
+  }
+}
+
+@media only screen and (max-width: 1400px) {
+
+}
+
+@media only screen and (max-width: 1000px) {
+
+}
+
+@media only screen and (max-width: 800px) {
+
+}
+
+@media only screen and (max-width: 600px) {
+
+}

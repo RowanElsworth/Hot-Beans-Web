@@ -1,0 +1,189 @@
+
+@import "./src/variables.scss";
+
+.mySwiper1 {
+  width: 100%;
+  height: 100vh;
+  height: 100dvh;
+  background-color: blue;
+  // swiper buttons
+  .swiper-button-next,
+  .swiper-button-prev {
+    color: white;
+  }
+  // swiper pagination
+  .swiper-pagination-bullet {
+    height: 12px;
+    width: 12px;
+    background: white;
+  }
+  .swiper-slide:nth-of-type(1) {
+    background-color: blue;
+    color: white;
+  }
+  .swiper-slide:nth-of-type(1) {
+    background-color: blue;
+    color: white;
+  }
+  .swiper-slide:nth-of-type(2) {
+    background-color: #5a9586;
+  }
+  .swiper-slide:nth-of-type(3) {
+    background-color: #8478DD;
+  }
+  .swiper-slide .slider-wrapper:nth-of-type(1) {
+    width: 100%;
+    height: 100vh;
+    padding: 0 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 10%;
+    user-select: none;
+    -webkit-user-select: none;
+    .s4-box {
+      width: 600px;
+      height: 600px;
+    }
+    .slider-img {
+      display: flex;
+      align-content: center;
+      justify-content: center;
+      img {
+        max-width: 100%;
+        height: auto;
+        object-fit: contain;
+      }
+    }
+
+    .slider-txt {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      gap: 50px;
+      p:nth-of-type(1) {
+        font-size: min(max(1.8rem, 2vw), 4rem);
+        font-weight: $font-semibold;
+      }
+      p:nth-of-type(2) {
+        font-size: min(max(1.8rem, 1.7vw), 2.5rem);
+      }
+    }
+  }
+}
+
+
+@media only screen and (max-width: 1400px) {
+  .mySwiper1 {
+    width: 100%;
+    height: 100vh;
+    height: 100dvh;
+    background-color: blue;
+    .swiper-slide:nth-of-type(2) {
+      background-color: #5a9586;
+    }
+    .swiper-slide:nth-of-type(3) {
+      background-color: #8478DD;
+    }
+    .swiper-slide .slider-wrapper:nth-of-type(1) {
+      width: 100%;
+      height: 100vh;
+      padding: 0 100px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: row;
+      gap: 10%;
+      user-select: none;
+      -webkit-user-select: none;
+      .s4-box {
+        width: 600px;
+        height: 600px;
+      }
+      .slider-img {
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        img {
+          max-width: 100%;
+          height: auto;
+          object-fit: contain;
+        }
+      }
+  
+      .slider-txt {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        gap: 50px;
+        p:nth-of-type(1) {
+          font-size: min(max(1.8rem, 2.7vw), 4rem);
+          font-weight: $font-semibold;
+        }
+        p:nth-of-type(2) {
+          font-size: min(max(1.8rem, 2.7vw), 2.5rem);
+        }
+      }
+    }
+  }
+}
+
+
+@media only screen and (max-width: 1000px) {
+  .mySwiper1 {
+    width: 100%;
+    height: 100vh;
+    height: 100dvh;
+    background-color: blue;
+    .swiper-slide .slider-wrapper:nth-of-type(1) {
+      width: 100%;
+      height: 100vh;
+      padding: 70px 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 0;
+      user-select: none;
+      -webkit-user-select: none;
+      .s4-box {
+        width: 80%;
+        height: 80%;
+      }
+      .slider-img {
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        img {
+          max-width: 100%;
+          height: auto;
+          object-fit: contain;
+        }
+      }
+  
+      .slider-txt {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        gap: 0;
+        text-align: center;
+        p:nth-of-type(1) {
+          font-size: min(max(1.8rem, 2.7vw), 4rem);
+          font-weight: $font-semibold;
+        }
+        p:nth-of-type(2) {
+          font-size: min(max(1.8rem, 2.7vw), 2.5rem);
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 800px) {
+
+}
+
+@media only screen and (max-width: 600px) {
+
+}
