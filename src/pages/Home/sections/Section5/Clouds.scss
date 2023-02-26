@@ -1,9 +1,10 @@
-
 $cloudWidth: 320px;
+$minCloudTop: 80px;
+$maxCloudTop: 500px;
+$minCloudLeft: -60%;
+$maxCloudLeft: 120%;
 
 .clouds {
-  // this might need to change to a linear gradient for file size sake,
-  // don't want it too big for obvious reasons
   background: rgb(205,205,205);
   background: linear-gradient(0deg, rgba(205,205,205,1) 0%, rgba(126,171,208,1) 50%, rgba(67,118,176,1) 100%);
   position: relative;
@@ -17,47 +18,52 @@ $cloudWidth: 320px;
 .initialCloud {
   position: absolute;
   left: 100%;
-  top: 130px;
-  animation: moveFirst 8s linear .2s;
+  top: random($minCloudTop, $maxCloudTop);
+  animation: moveFirst 8s linear 2s;
   animation-iteration-count: 1;
   width: $cloudWidth;
 }
 
+// Define a modified random function that takes two arguments
+@function random($min, $max) {
+  @return random() / 32767 * ($max - $min) + $min;
+}
+
 .firstCloud {
   position: absolute;
-  left: -30%;
-  top: 100px;
+  left: random($minCloudLeft, $maxCloudLeft);
+  top: random($minCloudTop, $maxCloudTop);
   animation: move 16s linear 9s infinite;
   width: $cloudWidth;
 }
 
 .secondCloud {
   position: absolute;
-  left: -30%;
-  top: 200px;
+  left: random($minCloudLeft, $maxCloudLeft);
+  top: random($minCloudTop, $maxCloudTop);
   animation: move 20s linear 0s infinite;
   width: $cloudWidth;
 }
 
 .thirdCloud {
-  top: 250px;
-  left: -30%;
+  top: random($minCloudTop, $maxCloudTop);
+  left: random($minCloudLeft, $maxCloudLeft);
   position: absolute;
   animation: move 16s linear 1s infinite;
   width: $cloudWidth;
 }
 
 .fourthCloud {
-  top: 300px;
-  left: -30%;
+  top: random($minCloudTop, $maxCloudTop);
+  left: random($minCloudLeft, $maxCloudLeft);
   position: absolute;
   animation: move 18s linear 12s infinite;
   width: $cloudWidth;
 }
 
 .fifthCloud {
-  top: 460px;
-  left: -30%;
+  top: random($minCloudTop, $maxCloudTop);
+  left: random($minCloudLeft, $maxCloudLeft);
   position: absolute;
   animation: move 24s linear 13s infinite;
   width: $cloudWidth;
@@ -69,7 +75,7 @@ $cloudWidth: 320px;
 
 @keyframes move {
   from {
-    left: -30%;
+    left: random($minCloudLeft, $maxCloudLeft);
   }
   to {
     left: 100%;
