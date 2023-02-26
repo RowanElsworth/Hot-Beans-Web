@@ -1,8 +1,4 @@
-$cloudWidth: 320px;
-$minCloudTop: 80px;
-$maxCloudTop: 500px;
-$minCloudLeft: -60%;
-$maxCloudLeft: 120%;
+$cloudSize: 20%;
 
 .clouds {
   background: rgb(205,205,205);
@@ -15,78 +11,30 @@ $maxCloudLeft: 120%;
   background-color: #00b4ff;
 }
 
-.initialCloud {
-  position: absolute;
-  left: 100%;
-  top: random($minCloudTop, $maxCloudTop);
-  animation: moveFirst 8s linear 2s;
-  animation-iteration-count: 1;
-  width: $cloudWidth;
+img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
-// Define a modified random function that takes two arguments
-@function random($min, $max) {
-  @return random() / 32767 * ($max - $min) + $min;
-}
-
-.firstCloud {
+.cloud {
   position: absolute;
-  left: random($minCloudLeft, $maxCloudLeft);
-  top: random($minCloudTop, $maxCloudTop);
-  animation: move 16s linear 9s infinite;
-  width: $cloudWidth;
-}
-
-.secondCloud {
-  position: absolute;
-  left: random($minCloudLeft, $maxCloudLeft);
-  top: random($minCloudTop, $maxCloudTop);
-  animation: move 20s linear 0s infinite;
-  width: $cloudWidth;
-}
-
-.thirdCloud {
-  top: random($minCloudTop, $maxCloudTop);
-  left: random($minCloudLeft, $maxCloudLeft);
-  position: absolute;
-  animation: move 16s linear 1s infinite;
-  width: $cloudWidth;
-}
-
-.fourthCloud {
-  top: random($minCloudTop, $maxCloudTop);
-  left: random($minCloudLeft, $maxCloudLeft);
-  position: absolute;
-  animation: move 18s linear 12s infinite;
-  width: $cloudWidth;
-}
-
-.fifthCloud {
-  top: random($minCloudTop, $maxCloudTop);
-  left: random($minCloudLeft, $maxCloudLeft);
-  position: absolute;
-  animation: move 24s linear 13s infinite;
-  width: $cloudWidth;
+  animation-name: moveCloud;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
 }
 
 #svgCloud {
   fill: #e3eeec;
 }
 
-@keyframes move {
+@keyframes moveCloud {
   from {
-    left: random($minCloudLeft, $maxCloudLeft);
+    left: -30%;
   }
   to {
     left: 100%;
   }
 }
 
-@keyframes moveFirst {
-  from {
-    left: 50%;
-  }
-  to {
-    left: 100%;
-  }
-}
