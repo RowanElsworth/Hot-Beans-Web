@@ -8,8 +8,7 @@ import { Navigation } from 'swiper';
 import ContactBtn from '../../../../components/ContactBtn'
 
 // Import assets
-import hotBeansGif from '../../assets/hotBeans.gif';
-import globey from '../../assets/globey2.png';
+import globey from '../../assets/globey3.png';
 
 import './Clouds.scss'
 import './Section5-6.scss'
@@ -25,7 +24,7 @@ export function Section5() {
     // Randomize y axis entry position between 0% and 65%
     const yPosition = Math.floor(Math.random() * 66);
     // Randomize animation duration between 12 and 22 seconds
-    const duration = Math.floor(Math.random() * 11) + 12;
+    const duration = Math.floor(Math.random() * 9) + 16;
 
     // Return new cloud object with randomized properties
     return {
@@ -38,14 +37,17 @@ export function Section5() {
 
   // Set up interval to generate new clouds on a randomized interval
   useEffect(() => {
-    const interval = setInterval(() => {
-      const newCloud = generateCloud();
-      // Add new cloud to state using spread operator
-      setClouds((prevClouds) => [...prevClouds, newCloud]);
-    }, Math.floor(Math.random() * 2000) + 3000);
+    // Only generates cloud if prefers-reduced-motion: no-preference
+    if (window.matchMedia('(prefers-reduced-motion: no-preference)').matches) {
+      const interval = setInterval(() => {
+        const newCloud = generateCloud();
+        // Add new cloud to state using spread operator
+        setClouds((prevClouds) => [...prevClouds, newCloud]);
+      }, Math.floor(Math.random() * 2000) + 3000);
 
-    // Clean up interval when component unmounts
-    return () => clearInterval(interval);
+      // Clean up interval when component unmounts
+      return () => clearInterval(interval);
+    }
   }, []);
 
   // Define function to remove cloud from state by ID
@@ -160,11 +162,10 @@ export function Section5() {
       {/* section 6 - convinced */}
       <section className="convinced">
         <div className="globey">
-          <img src={globey} alt="" />
-        </div>
-        <div className="content-wrapper">
-          <img src={hotBeansGif} alt="" className='hot-beans-gif'/>
-          <ContactBtn className="s6-contact"></ContactBtn>
+          <img src={globey} alt="Globey" />
+          <div className="content-wrapper">
+            <ContactBtn className="s6-contact"></ContactBtn>
+          </div>
         </div>
       </section>
     </section>

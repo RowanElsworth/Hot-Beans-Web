@@ -93,39 +93,31 @@
 // Section 6
 .convinced {
   width: 100%;
-  height: 32%;
+  height: 60%;
   position: absolute;
   bottom: 0;
+  left: 0;
+}
 
-  .globey img {
-    height: 32vh;
+.globey {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  img {
     width: 100%;
-  }
-  .content-wrapper {
+    height: 70%;
     position: absolute;
-    top: calc(50% - 9vh);
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 80%;
-    max-width: 800px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    .hot-beans-gif {
-      max-width: 200px;
-      height: auto;
-    }
-    
-    .convinced-text {
-      font-size: min(max(1.8rem, 5vw), 9rem);
-      letter-spacing: 10px;
-      font-weight: $font-semibold;
-      text-shadow: 4px 6px 3px rgba(0, 0, 0, 0.6);
-    }
-
+    bottom: 0;
   }
 }
+
+.content-wrapper {
+  margin-top: 170px;
+  position: relative;
+  z-index: 2;
+}
+
 
 @media only screen and (max-width: 1400px) {
   .bottom-container p {

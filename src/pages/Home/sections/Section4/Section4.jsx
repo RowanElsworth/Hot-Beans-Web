@@ -20,14 +20,14 @@ export function Section4() {
     <Swiper
       className="mySwiper1"
       navigation={true}
-      // try to make mousewheel work and take over the control of scrolling
+      loop={true}
       pagination={{
         clickable: true,
       }}
       modules={[Navigation, Pagination, Mousewheel]}
     >
       <SwiperSlide>
-        <div className="slider-wrapper">
+        <div className="slider-wrapper s4-slide-1">
           <div className="s4-box slider-img">
             <img src={dino} alt="" />
           </div>
@@ -38,7 +38,7 @@ export function Section4() {
         </div>
       </SwiperSlide>
       <SwiperSlide>
-        <div className="slider-wrapper">
+        <div className="slider-wrapper s4-slide-2">
           <div className="s4-box slider-img">
             <img src={rock} alt="" />
           </div>
@@ -49,7 +49,7 @@ export function Section4() {
         </div>
       </SwiperSlide>
       <SwiperSlide>
-        <div className="slider-wrapper">
+        <div className="slider-wrapper s4-slide-3">
           <div className="s4-box slider-img">
             <img src={pea} alt="" />
           </div>
