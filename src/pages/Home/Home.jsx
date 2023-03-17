@@ -12,6 +12,7 @@ import { Section4 } from './sections/Section4/Section4';
 import { Section5 } from './sections/Section5/Section5-6';
 import { Footer } from '../../components/footer'
 
+import "./Home.scss"
 
 export default function App() {
   useEffect(() => {
