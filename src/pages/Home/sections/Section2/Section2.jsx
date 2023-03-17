@@ -11,7 +11,7 @@ import s2example from "../../assets/s2-example.png"
 
 export function Section2() {
   const targetRef = useContext(TargetContext);
-
+  targetRef = targetRef;
   const { domRef, isVisible } = useFadeIn();
   
   return (
