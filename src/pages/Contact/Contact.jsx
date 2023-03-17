@@ -18,17 +18,17 @@ export default function App() {
           <div className="container-left">
             <div>
               <p>Phone</p>
-              <p>07727 895911</p>
+              <p>0115 9100 100</p>
             </div>
             <div>
               <p>Visit Us</p>
-              <p>Address 1</p>
-              <p>Address 2</p>
-              <p>Address 3</p>
+              <p>111 Canal St</p>
+              <p>Nottingham</p>
+              <p>NG1 1HB</p>
             </div>
             <div>
               <p>Email</p>
-              <a href="mailto:">AnEmail@email.com</a>
+              <a href="mailto:">hello@hotbeans.com</a>
             </div>
           </div>
           <div className="container-right">

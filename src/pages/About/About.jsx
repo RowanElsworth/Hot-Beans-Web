@@ -8,8 +8,9 @@ import { Footer } from "../../components/footer"
 import "./About.scss"
 
 // Image imports
-import Ismael from "./Ismael.png"
-import Sam from "./Sam no BG.png"
+import ismael from "./Ismael2.png"
+import kimmy from "./Kimmy2.png"
+import sam from "./Sam1.png"
 import bg from "./teamBackground.webp"
 
 export default function App() {
@@ -43,7 +44,7 @@ export default function App() {
             <div className="person">
               <div className="person-img-container">
                 <img className="circle" src={bg} alt=""  />
-                <img className="person-img" src={Ismael} alt="Ismael hard at work." />
+                <img className="person-img" src={ismael} alt="Ismael hard at work." />
               </div>
               <p>Ismael</p>
               <p>Managing Director</p>
@@ -51,15 +52,15 @@ export default function App() {
             <div className="person">
               <div className="person-img-container">
                 <img className="circle" src={bg} alt=""  />
-                <img className="person-img" src={Sam} alt="Sam smiling with his thumbs up." />
+                <img className="person-img" src={kimmy} alt="Sam smiling with his thumbs up." />
               </div>
-              <p>Karen</p>
-              <p>Graphic Lead</p>
+              <p>Kimmy</p>
+              <p>Supreme Graphic Lead</p>
             </div>
             <div className="person">
               <div className="person-img-container">
                 <img className="circle" src={bg} alt=""  />
-                <img className="person-img" src={Sam} alt="Sam smiling with his thumbs up." />
+                <img className="person-img" src={sam} alt="Sam smiling with his thumbs up." />
               </div>
               <p>Sam</p>
               <p>Quality-Control Intern</p>

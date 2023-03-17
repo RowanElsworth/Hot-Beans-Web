@@ -52,7 +52,7 @@
 
 .meet-team {
   width: 100%;
-  background-image: url("background.png");
+  background: linear-gradient(130deg, rgba(2,0,36,1) 0%, rgba(56,32,55,1) 50%);
   background-attachment: fixed;
   padding: 0 70px;
   h1 {
@@ -66,7 +66,7 @@
     .person {
       $transform-speed: 250ms;
       position: relative;
-      max-width: 30%;
+      width: 27%;
       margin-inline: auto;
 
       .person-img-container {
@@ -92,19 +92,19 @@
           position: relative;
           left: 0rem;
           z-index: 2;
-          transform: scale(1.7);
+          transform: scale(1);
           transition: transform $transform-speed ease;
         }
 
       }
       .person-img-container:hover {
-        transform: scale(1.1);
+        transform: scale(1.05);
       }
 
       .person-img-container:hover .person-img {
         transform:
-          scale(1.6)
-          translateY(-1.8rem);
+          scale(1.05)
+          translateY(-1.1rem);
       }
 
       p:nth-of-type(1) {

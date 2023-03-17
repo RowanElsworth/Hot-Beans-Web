@@ -7,8 +7,6 @@
   height: 100dvh;
   display: flex;
   padding: 70px 20px;
-  background-image: url("../../assets/background.png");
-  background-attachment: fixed;
 
   .s3-left-wrapper {
     width: 50%;
@@ -204,6 +202,25 @@
       }
     }
   }
+}
+
+// for the fade in effect
+.s3-fade1 {
+  opacity: 0;
+  transition: opacity 700ms ease-out, transform 700ms ease-out;
+  transform: translateY(10%);
+}
+
+.s3-fade2 {
+  opacity: 0;
+  transition: opacity 700ms ease-out, transform 700ms ease-out;
+  transform: translateY(10%);
+}
+
+.is-visible {
+  transform: translate(0%);
+  visibility: visible;
+  opacity: 1;
 }
 
 @keyframes load-bar {

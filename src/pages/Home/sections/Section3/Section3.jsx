@@ -1,5 +1,6 @@
 
 import { useEffect, useState } from "react";
+import { useFadeIn } from "../../../../utils/useFadeIn"
 
 // font awesome icons
 import { FaPen, FaSearch, FaMobileAlt, FaCommentAlt } from 'react-icons/fa';
@@ -13,6 +14,8 @@ import responsive from '../../assets/responsive.png';
 import "./Section3.scss"
 
 export function Section3() {
+
+  const { domRef, isVisible } = useFadeIn();
 
   // S3 Image changing
   const [index, setIndex] = useState(0);
@@ -40,7 +43,7 @@ export function Section3() {
 
   return (
     <section className="s3">
-    <div className="s3-left-wrapper">
+    <div className={`s3-left-wrapper s3-fade1 ${isVisible ? ' is-visible' : ''}`} ref={domRef}>
       <div className={index === 0 ? "s3-box s3-box-active" : "s3-box"} onClick={() => handleS3Click(0)}>
         <div className="s3-box-icon">
           <FaPen />
@@ -78,7 +81,7 @@ export function Section3() {
         </div>
       </div>
     </div>
-    <div className="s3-right-wrapper">
+    <div className={`s3-right-wrapper s3-fade2 ${isVisible ? ' is-visible' : ''}`} ref={domRef}>
       <div className="s3-right-img">
         <img src={images[index].src} alt="Slider" />
       </div>
