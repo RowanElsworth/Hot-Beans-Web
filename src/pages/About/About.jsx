@@ -9,7 +9,7 @@ import "./About.scss"
 
 // Image imports
 import ismael from "./Ismael2.png"
-import kimmy from "./Kimmy2.png"
+import kimmy from "./ollie.png"
 import sam from "./Sam1.png"
 import bg from "./teamBackground.webp"
 
@@ -54,8 +54,8 @@ export default function App() {
                 <img className="circle" src={bg} alt=""  />
                 <img className="person-img" src={kimmy} alt="Sam smiling with his thumbs up." />
               </div>
-              <p>Kimmy</p>
-              <p>Supreme Graphic Lead</p>
+              <p>Ollie</p>
+              <p>Graphic Lead</p>
             </div>
             <div className="person">
               <div className="person-img-container">

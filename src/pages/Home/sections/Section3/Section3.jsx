@@ -19,7 +19,7 @@ export function Section3() {
 
   // S3 Image changing
   const [index, setIndex] = useState(0);
-  const [setSelected] = useState(null);
+  const [selected, setSelected] = useState(null);
   const images = [
     { id: "unique", src: designs, text: "Where everything is built from scratch, no templates" },
     { id: "flexible", src: flexible, text: "Around your needs to ensure we deliver the best product that suits you" },

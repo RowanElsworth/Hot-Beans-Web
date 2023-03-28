@@ -14,7 +14,7 @@ export function Section2() {
   const { domRef, isVisible } = useFadeIn();
   
   return (
-    <section className="s2">
+    <section className="s2" ref={targetRef}>
       <div className="s2-top-wrapper">
         <div className={`s2-fade1 s2-box ${isVisible ? ' is-visible' : ''}`} ref={domRef}>
           <img src={s2example} alt="Phone, tablet, and monitor example designs of our websites" className="s2-example-img" />
