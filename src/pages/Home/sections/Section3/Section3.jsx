@@ -6,10 +6,10 @@ import { useFadeIn } from "../../../../utils/useFadeIn"
 import { FaPen, FaSearch, FaMobileAlt, FaCommentAlt } from 'react-icons/fa';
 
 // Image imports
-import designs from '../../assets/designs.png';
-import flexible from '../../assets/flexible.png';
-import seo from '../../assets/SEO.png';
-import responsive from '../../assets/responsive.png';
+import designs from '../../assets/designs.webp';
+import flexible from '../../assets/flexible.webp';
+import seo from '../../assets/SEO.webp';
+import responsive from '../../assets/responsive.webp';
 
 import "./Section3.scss"
 

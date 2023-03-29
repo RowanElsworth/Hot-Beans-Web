@@ -1,5 +1,5 @@
 
-@import "./src/variables.scss";
+@import "/src/variables.scss";
 
 .hero {
   width: 100%;
@@ -89,7 +89,7 @@
 
 @media (prefers-reduced-motion: reduce) {
   .rocket-ship {
-    background-image: url("../../assets/rocket3.png");
+    background-image: url("../../assets/rocket3.webp");
   }
 }
 
@@ -115,13 +115,13 @@
 // changes rocket image
 @keyframes rocket-change {
   0% {
-    background-image: url("../../assets/rocket2.png");
+    background-image: url("../../assets/rocket2.webp");
   }
   99% {
-    background-image: url("../../assets/rocket3.png");
+    background-image: url("../../assets/rocket3.webp");
   }
   100% {
-    background-image: url("../../assets/rocket3.png");
+    background-image: url("../../assets/rocket3.webp");
   }
 }
 

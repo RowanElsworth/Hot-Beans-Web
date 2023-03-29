@@ -22,11 +22,11 @@
   flex-wrap: wrap;
   background-image: 
   linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-  url("./AboutUs.png");
+  url("./AboutUs.webp");
   background-size: cover;
   background-attachment: fixed;
   .info-container {
-    width: 50%;
+    width: 100%;
     height: auto;
     padding: 10px 20px;
     display: flex;
@@ -34,6 +34,7 @@
     justify-content: center;
     background-attachment: fixed;
     p {
+      width: 60ch;
       font-size: min(max(1.8rem, 4vw), 2.4rem);
       text-align: center;
     }
@@ -154,7 +155,7 @@
   // s3 no padding
   .meet-team {
     width: 100%;
-    background-image: url("background.png");
+    background-image: url("background.webp");
     background-attachment: fixed;
     padding: 0 0;
   }

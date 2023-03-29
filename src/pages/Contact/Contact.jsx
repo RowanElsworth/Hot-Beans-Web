@@ -18,7 +18,7 @@ export default function App() {
           <div className="container-left">
             <div>
               <p>Phone</p>
-              <p>0115 9100 100</p>
+              <a href="tel:0115 9100 100">0115 9100 100</a>
             </div>
             <div>
               <p>Visit Us</p>

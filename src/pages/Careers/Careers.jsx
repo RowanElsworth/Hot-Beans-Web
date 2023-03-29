@@ -8,7 +8,7 @@ import { Footer } from "../../components/footer"
 
 import "./Careers.scss"
 
-import office from "./office-space.jpg";
+import office from "./office-space.webp";
 
 export default function App() {
   useEffect(() => {

@@ -8,9 +8,9 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
-import dino from '../../assets/testimonial-dino.png'
-import rock from '../../assets/rock.png'
-import pea from '../../assets/green pea thing.png'
+import dino from '../../assets/testimonial-dino.webp'
+import rock from '../../assets/rock.webp'
+import pea from '../../assets/green-pea-thing.webp'
 
 import './Section4.scss'
 

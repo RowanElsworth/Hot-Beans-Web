@@ -14,7 +14,7 @@
 .career-select {
   width: 100%;
   padding-top: $header-height;
-  background-image: url("./background.png");
+  background-image: url("./background.webp");
   background-attachment: fixed;
   display: flex;
   align-items: center;
@@ -104,13 +104,13 @@
         padding: 10px 30px;
         font-size: 24px;
         cursor: pointer;
-        border-radius: 7px;
+        border-radius: 1rem;
         background-color: var(--feedback-secondary-color);
         color: $accent-darkpurple;
         transition: all 0.3s;
         text-align: center;
         &:hover {
-          border-radius: 7px;
+          border-radius: 1rem;
           
           color: var(--feedback-primary-color);
           background-color: var(--background-color);
@@ -150,7 +150,7 @@
 @media only screen and (max-width: 1600px) {
   .career-select {
     width: 100%;
-    background-image: url("./background.png");
+    background-image: url("./background.webp");
     background-attachment: fixed;
     display: flex;
     align-items: center;
@@ -196,7 +196,7 @@
 @media only screen and (max-width: 1200px) {
   .career-select {
     width: 100%;
-    background-image: url("./background.png");
+    background-image: url("./background.webp");
     background-attachment: fixed;
     display: flex;
     align-items: center;
@@ -242,7 +242,7 @@
 @media only screen and (max-width: 1000px) {
   .career-select {
     width: 100%;
-    background-image: url("./background.png");
+    background-image: url("./background.webp");
     background-attachment: fixed;
     display: flex;
     align-items: center;

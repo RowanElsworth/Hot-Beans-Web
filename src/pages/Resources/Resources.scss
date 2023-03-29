@@ -1,5 +1,5 @@
 
-@import "../../variables.scss";
+@import "/src/variables.scss";
 
 form, input {
   display: block;
@@ -8,7 +8,7 @@ form, input {
 .resource-scroll {
   width: 100%;
   height: calc(100vh - 120px); // 120px == footer height
-  background-image: url("./background.png");
+  background-image: url("./background.webp");
   display: flex;
   align-items: center;
   .mySwiper3 {
@@ -20,46 +20,41 @@ form, input {
       color: white;
     }
     .swiper-slide {
-      div {
+      .site {
         width: 100%;
-        height: 100%;
+        height: 50%;
         display: flex;
         flex-direction: column;
-        justify-content: flex-end;
-        border-radius: 2rem;
-        .site-hover {
+        justify-content: center;
+        border-radius: 2rem 2rem 0 0;
+        position: relative;
+        div {
+          position: absolute;
+          bottom: -90%;
           width: 100%;
-          height: 100%;
-          padding: 15px;
-          background-color: black;
-          opacity: 0;
+          height: 90%;
+          padding: 10px;
           transition: 0.6s;
           display: flex;
           flex-direction: column;
           justify-content: center;
-          border-radius: 2rem;
-          user-select: none;
-          -webkit-user-select: none;
+          padding: 0 3%;
+          color: white;
+          border-radius: 0 0 2rem 2rem;
           p:nth-of-type(1) {
-            color: white;
-            font-size: min(max(1.8rem, 4vw), 3.6rem);
+            font-size: min(max(1.8rem, 4vw), 2.4rem);
             font-weight: $font-bold;
           }
           p:nth-of-type(2) {
-            font-size: min(max(1.8rem, 4vw), 2.6rem);
-            color: white;
+            font-size: min(max(1.8rem, 4vw), 2rem);
           }
           p:nth-of-type(3) {
             text-decoration: underline;
-            font-size: min(max(1.8rem, 4vw), 2.6rem);
-            color: white;
+            font-size: min(max(1.8rem, 4vw), 2.2rem);
           }
           .view-more {
             text-decoration: underline;
           }
-        }
-        .site-hover:hover {
-          opacity: 0.7;
         }
       }
     }
@@ -68,37 +63,58 @@ form, input {
 
 // articles
 .site-1 {
-  background-image: url("./freeCodeCamp.png");
-  background-size: contain;
+  background-image: url("./freeCodeCamp.webp");
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   background-color: #0A0A23;
+  div {
+    background-color: #0A0A23;
+  }
 }
 .site-2 {
   background-color: white;
-  background-image: url("./w3schools.png");
+  background-image: url("./w3schools.webp");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
+  div {
+    background-color: white;
+    * {
+      color: #05A86D;
+    }
+  }
 }
 .site-3 {
-  background-image: url("./khanAcademy.png");
-  background-size: contain;
+  background-image: url("./khanAcademy.webp");
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   background-color: #102B61;
+  div {
+    background-color: #102B61;
+  }
 }
 .site-4 {
-  background-image: url("./codecademy.png");
-  background-size: contain;
+  background-image: url("./codecademy.webp");
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   background-color: #F2F2F2;
+  div {
+    background-color: #F2F2F2;
+    * {
+      color: #1F3E56;
+    }
+  }
 }
 .site-5 {
-  background-image: url("./MDNWeb.png");
+  background-image: url("./MDNWeb.webp");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
   background-color: #0F1010;
+  div {
+    background-color: #0F1010;
+  }
 }

@@ -8,9 +8,9 @@ import { Footer } from "../../components/footer"
 import "./About.scss"
 
 // Image imports
-import ismael from "./Ismael2.png"
-import kimmy from "./ollie.png"
-import sam from "./Sam1.png"
+import ismael from "./Ismael2.webp"
+import ollie from "./ollie.webp"
+import sam from "./Sam1.webp"
 import bg from "./teamBackground.webp"
 
 export default function App() {
@@ -26,7 +26,6 @@ export default function App() {
           <h1>About Us.</h1>
           <p>Come and see what we're about.</p>
         </section>
-
         <section className="about-information">
           <div className="info-container">
             <p>Founded in 2015, we are a website development company based in Nottingham. Our team consists of talented and experienced web developers who are dedicated to creating high-quality and visually appealing websites for our clients.</p>
@@ -52,7 +51,7 @@ export default function App() {
             <div className="person">
               <div className="person-img-container">
                 <img className="circle" src={bg} alt=""  />
-                <img className="person-img" src={kimmy} alt="Sam smiling with his thumbs up." />
+                <img className="person-img" src={ollie} alt="Sam smiling with his thumbs up." />
               </div>
               <p>Ollie</p>
               <p>Graphic Lead</p>

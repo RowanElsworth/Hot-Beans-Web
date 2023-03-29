@@ -8,7 +8,7 @@ import { Navigation } from 'swiper';
 import ContactBtn from '../../../../components/ContactBtn'
 
 // Import assets
-import globey from '../../assets/globey3.png';
+import globey from '../../assets/globey3.webp';
 
 import './Clouds.scss'
 import './Section5-6.scss'

@@ -7,7 +7,7 @@ import ContactBtn from "../../../../components/ContactBtn";
 import "./Section2.scss"
 
 // Image imports
-import s2example from "../../assets/s2-example.png"
+import s2example from "../../assets/s2-example.webp"
 
 export function Section2() {
   const targetRef = useContext(TargetContext);

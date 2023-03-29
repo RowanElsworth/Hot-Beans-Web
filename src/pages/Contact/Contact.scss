@@ -8,7 +8,7 @@
 .contact-bg {
   width: 100%;
   min-height: 100%;
-  background-image: url("./background.png");
+  background-image: url("./background.webp");
   background-color: #213A23;
   display: flex;
   background-attachment: fixed;
@@ -25,6 +25,10 @@
     div {
       width: 50%;
       font-weight: $font-semibold;
+      a {
+        color: #3cd2ff;
+        text-decoration: underline;
+      }
     }
   }
 
@@ -72,7 +76,7 @@
     padding-top: 70px;
     width: 100%;
     min-height: 100%;
-    background-image: url("./background.png");
+    background-image: url("./background.webp");
     display: flex;
     flex-direction: column-reverse;
     .container-left{
@@ -145,7 +149,7 @@
     padding-top: 70px;
     width: 100%;
     min-height: 100%;
-    background-image: url("./background.png");
+    background-image: url("./background.webp");
     display: flex;
     flex-direction: column-reverse;
     .container-left{

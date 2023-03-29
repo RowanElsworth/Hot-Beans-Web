@@ -55,37 +55,37 @@
 
 // articles
 .article-1 {
-  background-image: url("../../assets/articles/article1.jpg");
+  background-image: url("../../assets/articles/article1.webp");
   background-size: cover;
   background-position: center;
 }
 .article-2 {
-  background-image: url("../../assets/articles/article2.jpg");
+  background-image: url("../../assets/articles/article2.webp");
   background-size: cover;
   background-position: center;
 }
 .article-3 {
-  background-image: url("../../assets/articles/article3.jpg");
+  background-image: url("../../assets/articles/article3.webp");
   background-size: cover;
   background-position: center;
 }
 .article-4 {
-  background-image: url("../../assets/articles/article4.jpg");
+  background-image: url("../../assets/articles/article4.webp");
   background-size: cover;
   background-position: center;
 }
 .article-5 {
-  background-image: url("../../assets/articles/article5.jpg");
+  background-image: url("../../assets/articles/article5.webp");
   background-size: cover;
   background-position: center;
 }
 .article-6 {
-  background-image: url("../../assets/articles/article6.jpg");
+  background-image: url("../../assets/articles/article6.webp");
   background-size: cover;
   background-position: center;
 }
 .article-7 {
-  background-image: url("../../assets/articles/article7.jpg");
+  background-image: url("../../assets/articles/article7.webp");
   background-size: cover;
   background-position: center;
 }
@@ -118,10 +118,14 @@
   z-index: 2;
 }
 
+.contact-btn {
+  filter: brightness(120%);
+  box-shadow: 3px 3px 8px #000;
+}
 
 @media only screen and (max-width: 1400px) {
   .bottom-container p {
-    font-size: min(max(1.8rem, 4vw), 2.1rem) !important;
+    font-size: min(max(1.8rem, 4vw), 1.8rem) !important;
   }
 }
 
@@ -131,12 +135,15 @@
 
 @media only screen and (max-width: 800px) {
   .bottom-container p {
-    font-size: min(max(1.8rem, 4vw), 2rem) !important;
+    font-size: min(max(1.8rem, 3vw), 1.4rem) !important;
   }
 }
 
 @media only screen and (max-width: 600px) {
   .swiper-slide a:hover .bottom-container {
     opacity: 0.7 !important;
+  }
+  .bottom-container p {
+    font-size: min(max(1.8rem, 2vw), 1.8rem);
   }
 }
