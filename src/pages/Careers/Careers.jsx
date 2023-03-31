@@ -21,39 +21,51 @@ export default function App() {
     <div className="snap-wrapper">
       <section className="career-select">
         <div className="box-container">
-          <Link to="/" className="career-box">
+          <div className="career-box">
             <div className="top-txt-container">
               <p className="position-title">Lead Front End Developer</p>
               <p className="position-desc">Do you have the skills to manage a team?</p>
             </div>
-            <p className="position-view">View Position</p>
-          </Link>
-          <Link to="/" className="career-box">
+            <div>
+              <li>5 years front-end experience.</li>
+              <li>Knowledge on HTML, CSS, JS. SCSS and Pug experience appreciated.</li>
+            </div>
+          </div>
+          <div className="career-box">
             <div className="top-txt-container">
               <p className="position-title">Back End Developer</p>
               <p className="position-desc">Take your back end development skills to the next level.</p>
             </div>
-            <p className="position-view">View Position</p>
-          </Link>
-          <Link to="/" className="career-box">
+            <div>
+              <li>3 years backend experience.</li>
+              <li>Knowledge of NodeJS.</li>
+            </div>
+          </div>
+          <div className="career-box">
             <div className="top-txt-container">
               <p className="position-title">Front End Developer</p>
               <p className="position-desc">Are you wanting to be a part of our creative team?</p>
             </div>
-            <p className="position-view">View Position</p>
-          </Link>
-          <Link to="/" className="career-box">
+            <div>
+              <li>Completion of a front-end development course.</li>
+              <li>Proficiency of HTML and CSS.</li>
+            </div>
+          </div>
+          <div className="career-box">
             <div className="top-txt-container">
               <p className="position-title">Graphic Designer</p>
               <p className="position-desc">Unleash your creative potential.</p>
             </div>
-            <p className="position-view">View Position</p>
-          </Link>
+            <div>
+              <li>Graphic design course or preliminary exam with experience.</li>
+              <li>Ability to draw.</li>
+            </div>
+          </div>
         </div>
       </section>
       <section className="career-contact">
         <div className="career-contact-wrapper">
-          <p>For General Career Enquiries</p>
+          <p>For Career Enquiries</p>
           <div className="contact-wrapper">
             <form
               action="https://formspree.io/f/mwkjvjay"
